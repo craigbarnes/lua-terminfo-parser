@@ -1,10 +1,16 @@
 terminfo-parser
 ===============
 
-[Lua] parser for the [`terminfo.src`] file format used by [ncurses].
-Intended to allow querying and transforming the terminfo database via
-scripting, beyond what is possible or performant with the curses
-toolset (i.e. `tput`, `infocmp`, etc.).
+This is a [Lua] parser for the [terminfo] database source format used by
+[ncurses]. It's intended to allow querying and transforming the database
+via scripting, beyond what is possible or performant with the curses
+command-line toolset (i.e. `tput`, `infocmp`, etc.).
+
+Requirements
+------------
+
+* [Lua] 5.1+
+* [LPeg] 1.0+
 
 License
 -------
@@ -22,6 +28,7 @@ Public License version 2 for more details.
 
 
 [Lua]: https://www.lua.org/
-[`terminfo.src`]: https://invisible-island.net/ncurses/#download_database
+[LPeg]: http://www.inf.puc-rio.br/~roberto/lpeg/lpeg.html
+[terminfo]: https://invisible-island.net/ncurses/#download_database
 [ncurses]: https://invisible-island.net/ncurses/
 [General Public License version 2]: https://www.gnu.org/licenses/gpl-2.0.html
