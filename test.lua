@@ -1,5 +1,6 @@
 local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
+assert(#terms > 1700)
 
 do
     local term = assert(terms["xterm+256color"])
@@ -26,3 +27,5 @@ do
     assert(term.use[2] == "xterm+titlestack")
     assert(term.use[3] == "xterm")
 end
+
+io.stderr:write("OK\n")
