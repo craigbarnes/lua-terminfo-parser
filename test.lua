@@ -3,6 +3,17 @@ local terms = assert(terminfo.parse_file("terminfo.src"))
 assert(#terms > 1700)
 
 do
+    local term = assert(terms["v3220"])
+    assert(term.am == true)
+    assert(term.xenl == true)
+    assert(term.cols == 80)
+    assert(term.lines == 24)
+    assert(term.is2 == "\27>\27[?3l\27[?7h\27[?8h\27[p")
+    assert(term.cub1 == "\b")
+    assert(term.ht == "\t")
+end
+
+do
     local term = assert(terms["xterm+256color"])
     assert(term.colors == 256)
 end
