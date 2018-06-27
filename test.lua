@@ -39,4 +39,15 @@ do
     assert(term.use[3] == "xterm")
 end
 
+do
+    local term = assert(terms["ansi.sys"])
+    assert(term.ka1 == "\128G")
+    assert(term.kcbt == "\128\15")
+    assert(term.kf6 == "\128@")
+    assert(term.kf11 == "\128\133")
+    assert(term.kf21 == "\128\\")
+    assert(term.kf24 == "\128\136")
+    assert(term.kf25 == "\128^")
+end
+
 io.stderr:write("OK\n")
