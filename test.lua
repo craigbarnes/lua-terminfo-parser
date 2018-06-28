@@ -3,7 +3,7 @@ local terms = assert(terminfo.parse_file("terminfo.src"))
 assert(#terms > 1700)
 
 do
-    local term = assert(terms["v3220"])
+    local term = assert(terms.v3220)
     assert(term.am == true)
     assert(term.xenl == true)
     assert(term.cols == 80)
@@ -51,7 +51,7 @@ do
 end
 
 do -- Check that chained lookup of "use=" references works
-    local tw52 = assert(terms["tw52"])
+    local tw52 = assert(terms.tw52)
     -- Lookup chain: tw52 -> tw52-m -> at-m
     assert(tw52.kRIT == "\27c")
     assert(not tw52.non_existent_cap_name)
