@@ -5,6 +5,7 @@
 
 local lpeg = require "lpeg"
 local char, tonumber, open, assert = string.char, tonumber, io.open, assert
+local setmetatable = setmetatable
 local P, R, S = lpeg.P, lpeg.R, lpeg.S
 local C, Cc, Cs = lpeg.C, lpeg.Cc, lpeg.Cs
 local Cf, Cg, Ct = lpeg.Cf, lpeg.Cg, lpeg.Ct
@@ -45,6 +46,18 @@ local function unescape_octal(octstr)
     return char(byte)
 end
 
+local ChainedLookup = {
+    __index = function(t, k)
+        assert(k ~= "TERM")
+        assert(k ~= "use")
+        local use = assert(t.use)
+        for i = use.length, 1, -1 do
+            local refname = assert(use[i])
+            return use._backref[refname][k]
+        end
+    end
+}
+
 local function setfield(t, k, v)
     if k == "use" then
         local use = t.use
@@ -54,6 +67,7 @@ local function setfield(t, k, v)
             use.length = length
         else
             t.use = {v, length = 1}
+            setmetatable(t, ChainedLookup)
         end
         return t
     end
@@ -110,12 +124,15 @@ local function parse(input)
     end
     for i = 1, #t do
         local entry = assert(t[i])
+        if entry.use then
+            -- Add reference to main table for ChainedLookup
+            entry.use._backref = t
+        end
         local names = assert(entry.TERM)
         for name in names:gmatch("([^|]+)|") do
             t[name] = entry
         end
     end
-    -- TODO: merge values from other tables referenced via "use="
     return t
 end
 

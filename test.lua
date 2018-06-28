@@ -50,4 +50,11 @@ do
     assert(term.kf25 == "\128^")
 end
 
+do -- Check that chained lookup of "use=" references works
+    local tw52 = assert(terms["tw52"])
+    -- Lookup chain: tw52 -> tw52-m -> at-m
+    assert(tw52.kRIT == "\27c")
+    assert(not tw52.non_existent_cap_name)
+end
+
 io.stderr:write("OK\n")
