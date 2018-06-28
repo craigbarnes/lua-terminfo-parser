@@ -1,7 +1,9 @@
-package.path = "./?.lua;" .. package.path
-local terminfo = require "terminfo-parser"
+local terminfo = assert(loadfile("./terminfo-parser.lua", "t"))()
+local parse_file = assert(terminfo.parse_file)
+local assert, stderr = assert, io.stderr
+local _ENV = nil
 
-local terms = assert(terminfo.parse_file("terminfo.src"))
+local terms = assert(parse_file("terminfo.src"))
 assert(#terms > 1700)
 
 do
@@ -59,4 +61,4 @@ do -- Check that chained lookup of "use=" references works
     assert(not tw52.non_existent_cap_name)
 end
 
-io.stderr:write("OK\n")
+stderr:write("OK\n")
