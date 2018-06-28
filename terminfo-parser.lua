@@ -53,7 +53,10 @@ local ChainedLookup = {
         local use = assert(t.use)
         for i = use.length, 1, -1 do
             local refname = assert(use[i])
-            return use._backref[refname][k]
+            local v = use._backref[refname][k]
+            if v ~= nil then
+                return v
+            end
         end
     end
 }

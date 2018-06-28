@@ -41,6 +41,11 @@ do
     assert(term.use[1] == "xterm+direct2")
     assert(term.use[2] == "xterm+titlestack")
     assert(term.use[3] == "xterm")
+    -- Chained from "xterm+kbs"
+    assert(term.kbs == "\b")
+    -- Chained from "xterm+pc+edit"
+    assert(term.kend == "\27[4~")
+    assert(term.khome == "\27[1~")
 end
 
 do
