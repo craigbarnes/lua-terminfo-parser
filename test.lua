@@ -1,4 +1,6 @@
+package.path = "./?.lua;" .. package.path
 local terminfo = require "terminfo-parser"
+
 local terms = assert(terminfo.parse_file("terminfo.src"))
 assert(#terms > 1700)
 
