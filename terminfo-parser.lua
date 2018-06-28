@@ -74,6 +74,7 @@ local function setfield(t, k, v)
         end
         return t
     end
+    assert(t[k] == nil, "duplicate field")
     t[k] = v
     return t
 end
