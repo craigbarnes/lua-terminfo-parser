@@ -1,0 +1,6 @@
+test:
+    image: registry.gitlab.com/craigbarnes/dockerfiles/lua-testing
+    script:
+        - lua5.3 test.lua
+        - lua5.2 test.lua
+        - lua5.1 test.lua
