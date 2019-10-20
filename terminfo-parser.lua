@@ -1,5 +1,5 @@
 -- Parser for terminfo(5) source format.
--- Copyright 2018 Craig Barnes.
+-- Copyright 2018-2019 Craig Barnes.
 -- SPDX-License-Identifier: GPL-2.0-only
 -- See also: https://invisible-island.net/ncurses/#download_database
 
