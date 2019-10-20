@@ -92,7 +92,7 @@ do
     local skip = (whitespace + comment)^0
 
     local backslash = P"\\" / "" * (
-        R"03" * R"07"^-2 / unescape_octal
+        R"03" * R"09"^-2 / unescape_octal
         + S"Eenlrtbfs0^,:\\" / unescape_char
     )
 
