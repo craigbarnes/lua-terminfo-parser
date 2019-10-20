@@ -5,7 +5,8 @@
 
 local lpeg = require "lpeg"
 local char, tonumber, open, assert = string.char, tonumber, io.open, assert
-local setmetatable = setmetatable
+local ipairs, setmetatable = ipairs, setmetatable
+local wrap, yield = coroutine.wrap, coroutine.yield
 local P, R, S = lpeg.P, lpeg.R, lpeg.S
 local C, Cc, Cs = lpeg.C, lpeg.Cc, lpeg.Cs
 local Cf, Cg, Ct = lpeg.Cf, lpeg.Cg, lpeg.Ct
@@ -48,6 +49,7 @@ end
 
 local ChainedLookup = {
     __index = function(t, k)
+        assert(k ~= "DESC")
         assert(k ~= "TERM")
         assert(k ~= "use")
         local use = assert(t.use)
@@ -113,12 +115,24 @@ do
     local cap = capspace * (strcap + numcap + cancelled + boolcap) * P","
 
     local entrychar = R"\032\126" - S","
-    local entryname = Cg(Cc"TERM" * C(entrychar^1)) * P",\n"
+    local entryname = Cg(Cc"DESC" * C(entrychar^1)) * P",\n"
     local caps = Cf(Ct"" * entryname * cap^1, setfield)
     local entry = skip * caps * skip
     local eof = P(-1)
 
     terminfo = Ct(entry^1) * eof
+end
+
+local TermInfo = {}
+TermInfo.__index = TermInfo
+
+function TermInfo:iter()
+    local function iter(t)
+        for i, v in ipairs(t) do
+            yield(v.TERM[1], v)
+        end
+    end
+    return wrap(function() iter(self) end)
 end
 
 local function parse(input)
@@ -132,12 +146,16 @@ local function parse(input)
             -- Add reference to main table for ChainedLookup
             entry.use._backref = t
         end
-        local names = assert(entry.TERM)
-        for name in names:gmatch("([^|]+)|") do
+        local desc = assert(entry.DESC)
+        local n = 0
+        entry.TERM = {}
+        for name in desc:gmatch("([^|]+)|") do
             t[name] = entry
+            n = n + 1
+            entry.TERM[n] = name
         end
     end
-    return t
+    return setmetatable(t, TermInfo)
 end
 
 local function parse_file(filename)
