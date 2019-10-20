@@ -153,7 +153,31 @@ local function parse_file(filename)
     return parse(text)
 end
 
+local escmap = setmetatable ({
+    [":"] = "\\:",
+    [","] = "\\,",
+    ["^"] = "\\^",
+    [" "] = "\\s",
+    ["\\"] = "\\\\",
+    ["\127"] = "^?",
+}, {
+    __index = function(t, ch)
+        local byte = ch:byte()
+        if byte < 32 then
+            return ("^%c"):format(byte + 64)
+        elseif byte > 127 then
+            return ("\\%03o"):format(byte)
+        end
+        return ch
+    end
+})
+
+local function escape(str)
+    return str:gsub(".", escmap)
+end
+
 return {
     parse = parse,
     parse_file = parse_file,
+    escape = escape,
 }
