@@ -1,6 +1,6 @@
 local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
-local ignored = {TERM = true, use = true}
+local ignored = {TERM = true, DESC = true, use = true}
 local capnames = {n = 0}
 
 for i, entry in ipairs(terms) do
