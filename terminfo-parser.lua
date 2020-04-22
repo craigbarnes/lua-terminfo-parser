@@ -47,11 +47,16 @@ local function unescape_octal(octstr)
     return char(byte)
 end
 
+-- These are the metadata fields added to each entry by the parser
+local special_fields = {
+    DESC = true, -- Raw/unparsed entry header
+    TERM = true, -- Array of TERM names (parsed from DESC)
+    use = true, -- Array of "use" references (if any)
+}
+
 local ChainedLookup = {
     __index = function(t, k)
-        assert(k ~= "DESC")
-        assert(k ~= "TERM")
-        assert(k ~= "use")
+        assert(not special_fields[k], "Invalid key: " .. k)
         local use = assert(t.use)
         for i = use.length, 1, -1 do
             local refname = assert(use[i])
