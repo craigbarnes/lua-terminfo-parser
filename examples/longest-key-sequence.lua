@@ -26,11 +26,8 @@ table.sort(keys, function(a, b)
     return a.len > b.len
 end)
 
-for i = 1, n do
+for i = 1, math.min(n, 20) do
     local t = assert(keys[i])
     local seq = terminfo.escape(t.seq)
     io.write(("%3u  %-6s %-18s %s\n"):format(t.len, t.cap, t.term, seq))
-    if i >= 20 then
-        break -- Show top 20
-    end
 end
