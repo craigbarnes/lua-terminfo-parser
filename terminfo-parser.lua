@@ -7,6 +7,7 @@ local lpeg = require "lpeg"
 local char, tonumber, open, assert = string.char, tonumber, io.open, assert
 local ipairs, setmetatable = ipairs, setmetatable
 local wrap, yield = coroutine.wrap, coroutine.yield
+local type, tostring = type, tostring
 local P, R, S = lpeg.P, lpeg.R, lpeg.S
 local C, Cc, Cs = lpeg.C, lpeg.Cc, lpeg.Cs
 local Cf, Cg, Ct = lpeg.Cf, lpeg.Cg, lpeg.Ct
@@ -195,8 +196,11 @@ local escmap = setmetatable ({
     end
 })
 
-local function escape(str)
-    return str:gsub(".", escmap)
+local function escape(cap)
+    if type(cap) == "string" then
+        return (cap:gsub(".", escmap))
+    end
+    return tostring(cap)
 end
 
 return {
