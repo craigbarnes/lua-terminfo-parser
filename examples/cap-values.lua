@@ -1,19 +1,30 @@
 local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local counts, index, n = {}, {}, 0
+local capname = arg[1]
+
+if not capname then
+    io.stderr:write("Usage: ", arg[0], " CAP-NAME\n")
+    os.exit(1)
+end
 
 for term, caps in terms:iter() do
-    local el = caps.el
-    if el then
-        local count = counts[el]
+    local val = caps[capname]
+    if val then
+        local count = counts[val]
         if count then
-            counts[el] = count + 1
+            counts[val] = count + 1
         else
-            counts[el] = 1
+            counts[val] = 1
             n = n + 1
-            index[n] = el
+            index[n] = val
         end
     end
+end
+
+if n == 0 then
+    io.stderr:write("Error: no entries with capability '", capname, "'\n")
+    os.exit(1)
 end
 
 table.sort(index, function(a, b)
