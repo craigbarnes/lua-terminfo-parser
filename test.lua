@@ -1,10 +1,12 @@
 local terminfo = assert(loadfile("./terminfo-parser.lua", "t"))()
 local parse_file = assert(terminfo.parse_file)
-local assert, stderr = assert, io.stderr
+local assert, type, stderr = assert, type, io.stderr
 local _ENV = nil
 
 local terms = assert(parse_file("terminfo.src"))
 assert(#terms > 1700)
+assert(type(terms.iter) == "function")
+assert(terms:iter()() == "dumb")
 
 do
     local term = assert(terms.v3220)
