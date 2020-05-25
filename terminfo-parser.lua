@@ -129,10 +129,10 @@ do
     terminfo = Ct(entry^1) * eof
 end
 
-local TermInfo = {}
-TermInfo.__index = TermInfo
+local Entries = {}
+Entries.__index = Entries
 
-function TermInfo:iter()
+function Entries:iter()
     local function iter(t)
         for i, v in ipairs(t) do
             yield(v.TERM[1], v)
@@ -142,26 +142,26 @@ function TermInfo:iter()
 end
 
 local function parse(input)
-    local t = terminfo:match(input)
-    if not t then
+    local entries = terminfo:match(input)
+    if not entries then
         return nil, "Parsing failed"
     end
-    for i = 1, #t do
-        local entry = assert(t[i])
+    for i = 1, #entries do
+        local entry = assert(entries[i])
         if entry.use then
             -- Add reference to main table for ChainedLookup
-            entry.use._backref = t
+            entry.use._backref = entries
         end
         local desc = assert(entry.DESC)
         local n = 0
         entry.TERM = {}
         for name in desc:gmatch("([^|]+)|") do
-            t[name] = entry
+            entries[name] = entry
             n = n + 1
             entry.TERM[n] = name
         end
     end
-    return setmetatable(t, TermInfo)
+    return setmetatable(entries, Entries)
 end
 
 local function parse_file(filename)
