@@ -5,7 +5,8 @@
 
 local lpeg = require "lpeg"
 local char, tonumber, open, assert = string.char, tonumber, io.open, assert
-local ipairs, setmetatable = ipairs, setmetatable
+local setmetatable, rawget = setmetatable, rawget
+local pairs, ipairs, next = pairs, ipairs, next
 local wrap, yield = coroutine.wrap, coroutine.yield
 local type, tostring = type, tostring
 local P, R, S = lpeg.P, lpeg.R, lpeg.S
@@ -48,27 +49,6 @@ local function unescape_octal(octstr)
     return char(byte)
 end
 
--- These are the metadata fields added to each entry by the parser
-local special_fields = {
-    DESC = true, -- Raw/unparsed entry header
-    TERM = true, -- Array of TERM names (parsed from DESC)
-    use = true, -- Array of "use" references (if any)
-}
-
-local ChainedLookup = {
-    __index = function(t, k)
-        assert(not special_fields[k], "Invalid key: " .. k)
-        local use = assert(t.use)
-        for i = use.length, 1, -1 do
-            local refname = assert(use[i])
-            local v = use._backref[refname][k]
-            if v ~= nil then
-                return v
-            end
-        end
-    end
-}
-
 local function setfield(t, k, v)
     if k == "use" then
         local use = t.use
@@ -78,7 +58,6 @@ local function setfield(t, k, v)
             use.length = length
         else
             t.use = {v, length = 1}
-            setmetatable(t, ChainedLookup)
         end
         return t
     end
@@ -129,6 +108,58 @@ do
     terminfo = Ct(entry^1) * eof
 end
 
+-- These are the metadata fields added to each entry by the parser
+local special_fields = {
+    DESC = true, -- Raw/unparsed entry header
+    TERM = true, -- Array of TERM names (parsed from DESC)
+    use = true, -- Array of "use" references (if any)
+}
+
+local function iter_entry(self)
+    local seen = {}
+    local function iter(entry)
+        for cap, val in pairs(entry) do
+            if not special_fields[cap] and not seen[cap] then
+                seen[cap] = true
+                yield(cap, val, entry.TERM[1])
+            end
+        end
+    end
+    local function deep_iter(entry)
+        iter(entry)
+        local use = rawget(entry, "use")
+        if use then
+            for i = use.length, 1, -1 do
+                local refname = assert(use[i])
+                deep_iter(assert(use._backref[refname]))
+            end
+        end
+    end
+    return wrap(function() deep_iter(self) end)
+end
+
+local Entry = {}
+
+function Entry:__index(k)
+    if special_fields[k] then
+        return nil
+    elseif k == "iter" then
+        return iter_entry
+    end
+    local use = rawget(self, "use")
+    if not use then
+        return nil
+    end
+    for i = use.length, 1, -1 do
+        local refname = assert(use[i])
+        local v = use._backref[refname][k]
+        if v ~= nil then
+            return v
+        end
+    end
+end
+
+
 local Entries = {}
 Entries.__index = Entries
 
@@ -149,7 +180,7 @@ local function parse(input)
     for i = 1, #entries do
         local entry = assert(entries[i])
         if entry.use then
-            -- Add reference to main table for ChainedLookup
+            -- Add reference to main table, for Entry methods to use
             entry.use._backref = entries
         end
         local desc = assert(entry.DESC)
@@ -160,6 +191,7 @@ local function parse(input)
             n = n + 1
             entry.TERM[n] = name
         end
+        setmetatable(entry, Entry)
     end
     return setmetatable(entries, Entries)
 end

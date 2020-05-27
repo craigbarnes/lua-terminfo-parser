@@ -1,6 +1,7 @@
 local terminfo = assert(loadfile("./terminfo-parser.lua", "t"))()
 local parse_file = assert(terminfo.parse_file)
 local assert, type, stderr = assert, type, io.stderr
+local pairs, rawget = pairs, rawget
 local _ENV = nil
 
 local terms = assert(parse_file("terminfo.src"))
@@ -67,7 +68,29 @@ do -- Check that chained lookup of "use=" references works
     local tw52 = assert(terms.tw52)
     -- Lookup chain: tw52 -> tw52-m -> at-m
     assert(tw52.kRIT == "\27c")
-    assert(not tw52.non_existent_cap_name)
+    assert(tw52.non_existent_cap_name == nil)
+end
+
+do -- Check that Entry:__index("use") behaves as expected
+    local djgpp203 = assert(terms.djgpp203)
+    assert(djgpp203.use == nil)
+    assert(djgpp203.lines == 25)
+    assert(djgpp203.non_existent_cap_name == nil)
+    local tw52 = assert(terms.tw52)
+    assert(type(tw52.use) == "table")
+    assert(tw52.use == rawget(tw52, "use"))
+end
+
+do
+    local tw52 = assert(terms.tw52)
+    local seen = {}
+    for k, v in tw52:iter() do
+        assert(k ~= "use")
+        assert(k ~= "DESC")
+        assert(k ~= "TERM")
+        seen[k] = true
+    end
+    assert(seen.kRIT)
 end
 
 stderr:write("OK\n")
