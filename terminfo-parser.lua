@@ -239,4 +239,5 @@ return {
     parse = parse,
     parse_file = parse_file,
     escape = escape,
+    special_fields = special_fields,
 }
