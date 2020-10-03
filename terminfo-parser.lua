@@ -51,13 +51,13 @@ end
 
 local function setfield(t, k, v)
     if k == "use" then
-        local use = t.use
+        local use = t._use
         if use then
             local length = use.length + 1
             use[length] = v
             use.length = length
         else
-            t.use = {v, length = 1}
+            t._use = {v, length = 1}
         end
         return t
     end
@@ -100,7 +100,7 @@ do
     local cap = capspace * (strcap + numcap + cancelled + boolcap) * P","
 
     local entrychar = R"\032\126" - S","
-    local entryname = Cg(Cc"DESC" * C(entrychar^1)) * P",\n"
+    local entryname = Cg(Cc"_DESC" * C(entrychar^1)) * P",\n"
     local caps = Cf(Ct"" * entryname * cap^1, setfield)
     local entry = skip * caps * skip
     local eof = P(-1)
@@ -108,26 +108,27 @@ do
     terminfo = Ct(entry^1) * eof
 end
 
--- These are the metadata fields added to each entry by the parser
-local special_fields = {
-    DESC = true, -- Raw/unparsed entry header
-    TERM = true, -- Array of TERM names (parsed from DESC)
-    use = true, -- Array of "use" references (if any)
-}
+local function is_non_enumerated_field(name)
+    local prefixes = {
+        ["."] = true, -- Commented out capability name
+        ["_"] = true, -- Metadata field
+    }
+    return prefixes[name:sub(1, 1)]
+end
 
 local function iter_entry(self)
     local seen = {}
     local function iter(entry)
-        for cap, val in pairs(entry) do
-            if not special_fields[cap] and not seen[cap] then
-                seen[cap] = true
-                yield(cap, val, entry.TERM[1])
+        for name, val in pairs(entry) do
+            if not is_non_enumerated_field(name) and not seen[name] then
+                seen[name] = true
+                yield(name, val)
             end
         end
     end
     local function deep_iter(entry)
         iter(entry)
-        local use = rawget(entry, "use")
+        local use = rawget(entry, "_use")
         if use then
             for i = use.length, 1, -1 do
                 local refname = assert(use[i])
@@ -141,12 +142,12 @@ end
 local Entry = {}
 
 function Entry:__index(k)
-    if special_fields[k] then
-        return nil
-    elseif k == "iter" then
+    if k == "iter" then
         return iter_entry
+    elseif is_non_enumerated_field(k) then
+        return nil
     end
-    local use = rawget(self, "use")
+    local use = rawget(self, "_use")
     if not use then
         return nil
     end
@@ -159,14 +160,13 @@ function Entry:__index(k)
     end
 end
 
-
 local Entries = {}
 Entries.__index = Entries
 
 function Entries:iter()
     local function iter(t)
         for i, v in ipairs(t) do
-            yield(v.TERM[1], v)
+            yield(v._TERM[1], v)
         end
     end
     return wrap(function() iter(self) end)
@@ -179,17 +179,18 @@ local function parse(input)
     end
     for i = 1, #entries do
         local entry = assert(entries[i])
-        if entry.use then
+        local use = entry._use
+        if use then
             -- Add reference to main table, for Entry methods to use
-            entry.use._backref = entries
+            use._backref = entries
         end
-        local desc = assert(entry.DESC)
+        local desc = assert(entry._DESC)
         local n = 0
-        entry.TERM = {}
+        entry._TERM = {}
         for name in desc:gmatch("([^|]+)|") do
             entries[name] = entry
             n = n + 1
-            entry.TERM[n] = name
+            entry._TERM[n] = name
         end
         setmetatable(entry, Entry)
     end
@@ -239,5 +240,4 @@ return {
     parse = parse,
     parse_file = parse_file,
     escape = escape,
-    special_fields = special_fields,
 }

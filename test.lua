@@ -27,9 +27,9 @@ end
 
 do
     local term = assert(terms["xterm+direct2"])
-    assert(term.DESC == "xterm+direct2|xterm with direct-color indexing")
-    assert(#term.TERM == 1)
-    assert(term.TERM[1] == "xterm+direct2")
+    assert(term._DESC == "xterm+direct2|xterm with direct-color indexing")
+    assert(#term._TERM == 1)
+    assert(term._TERM[1] == "xterm+direct2")
     assert(term.colors == 2^24)
     assert(term.RGB == true)
     assert(term.initc == false)
@@ -41,11 +41,11 @@ end
 
 do
     local term = assert(terms["xterm-direct2"])
-    assert(term.use)
-    assert(term.use.length == 3)
-    assert(term.use[1] == "xterm+direct2")
-    assert(term.use[2] == "xterm+titlestack")
-    assert(term.use[3] == "xterm")
+    local use = assert(term._use)
+    assert(use.length == 3)
+    assert(use[1] == "xterm+direct2")
+    assert(use[2] == "xterm+titlestack")
+    assert(use[3] == "xterm")
     -- Chained from "xterm+kbs"
     assert(term.kbs == "\b")
     -- Chained from "xterm+pc+edit"
@@ -77,8 +77,8 @@ do -- Check that Entry:__index("use") behaves as expected
     assert(djgpp203.lines == 25)
     assert(djgpp203.non_existent_cap_name == nil)
     local tw52 = assert(terms.tw52)
-    assert(type(tw52.use) == "table")
-    assert(tw52.use == rawget(tw52, "use"))
+    assert(type(tw52._use) == "table")
+    assert(tw52._use == rawget(tw52, "_use"))
 end
 
 do
@@ -88,6 +88,9 @@ do
         assert(k ~= "use")
         assert(k ~= "DESC")
         assert(k ~= "TERM")
+        assert(k ~= "_use")
+        assert(k ~= "_DESC")
+        assert(k ~= "_TERM")
         seen[k] = true
     end
     assert(seen.kRIT)
