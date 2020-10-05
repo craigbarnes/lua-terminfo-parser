@@ -7,7 +7,7 @@ for i, entry in ipairs(terms) do
         if (capname:sub(1, 1) == "k" and type(val) == "string") then
             n = n + 1
             keys[n] = {
-                term = entry.TERM[1],
+                term = assert(entry._TERM[1]),
                 cap = capname,
                 seq = val,
                 len = #val
