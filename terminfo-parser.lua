@@ -165,8 +165,9 @@ Entries.__index = Entries
 
 function Entries:iter()
     local function iter(t)
-        for i, v in ipairs(t) do
-            yield(v._TERM[1], v)
+        for i, entry in ipairs(t) do
+            local term = assert(entry._TERM[1])
+            yield(term, entry)
         end
     end
     return wrap(function() iter(self) end)
@@ -191,6 +192,12 @@ local function parse(input)
             entries[name] = entry
             n = n + 1
             entry._TERM[n] = name
+        end
+        if n == 0 then
+            -- Some entries have only 1 name and no description, so
+            -- the gmatch() loop above doesn't extract anything
+            entries[desc] = entry
+            entry._TERM[1] = desc
         end
         setmetatable(entry, Entry)
     end

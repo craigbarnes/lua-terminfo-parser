@@ -2,8 +2,8 @@ local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local capnames = {n = 0}
 
-for i, entry in ipairs(terms) do
-    for k in entry:iter() do
+for term, caps in terms:iter() do
+    for k in caps:iter() do
         if not capnames[k] then
             local n = capnames.n + 1
             capnames[n] = k

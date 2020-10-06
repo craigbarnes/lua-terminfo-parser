@@ -81,6 +81,17 @@ do -- Check that Entry:__index("use") behaves as expected
     assert(tw52._use == rawget(tw52, "_use"))
 end
 
+do -- Check that entry headers with no description are parsed correctly
+    local addrinfo = assert(terms.addrinfo)
+    assert(addrinfo._TERM[1] == "addrinfo")
+    assert(addrinfo.cup == "\31%p1%c%p2%c")
+    assert(addrinfo.home == "\8")
+    local infoton = assert(terms.infoton)
+    assert(infoton._TERM[1] == "infoton")
+    assert(infoton.cud1 == "\n")
+    assert(infoton.ed == "\11")
+end
+
 do
     local tw52 = assert(terms.tw52)
     local seen = {}
