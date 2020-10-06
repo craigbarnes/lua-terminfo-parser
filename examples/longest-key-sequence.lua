@@ -2,8 +2,8 @@ local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local keys, n = {}, 0
 
-for i, entry in ipairs(terms) do
-    for capname, val in pairs(entry) do
+for term, entry in terms:iter() do
+    for capname, val in entry:iter() do
         if (capname:sub(1, 1) == "k" and type(val) == "string") then
             n = n + 1
             keys[n] = {
