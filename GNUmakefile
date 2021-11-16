@@ -1,21 +1,18 @@
 LUA = lua
-CURL = curl
-GUNZIP = gunzip
-GET = $(CURL) -sSL -o '$@'
+GIT = git
+NCURSES-REPO = https://github.com/ThomasDickey/ncurses-snapshots.git
 
 check:
 	$(LUA) test.lua
 
 update: terminfo.src
 
-terminfo.src: .tmp/terminfo.src
-	cat $< > $@
+terminfo.src: FORCE | .tmp/ncurses-snapshots/
+	$(GIT) -C $| pull origin master:master
+	cp $|misc/terminfo.src $@
 
-.tmp/terminfo.src: .tmp/terminfo.src.gz
-	$(GUNZIP) -c $< > $@
-
-.tmp/terminfo.src.gz: FORCE | .tmp/
-	$(GET) https://invisible-island.net/datafiles/current/terminfo.src.gz
+.tmp/ncurses-snapshots/: | .tmp/
+	test -d $@ || $(GIT) clone $(NCURSES-REPO) $@
 
 .tmp/:
 	mkdir -p $@
