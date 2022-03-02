@@ -1,3 +1,5 @@
+-- Prints the name of every capability found in the database
+
 local terminfo = require "terminfo-parser"
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local capnames = {n = 0}
