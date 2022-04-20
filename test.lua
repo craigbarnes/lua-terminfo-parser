@@ -27,7 +27,7 @@ end
 
 do
     local term = assert(terms["xterm+direct2"])
-    assert(term._DESC == "xterm+direct2|xterm with direct-color indexing")
+    assert(term._DESC == "xterm+direct2|xterm with direct-color indexing (old building-block)")
     assert(#term._TERM == 1)
     assert(term._TERM[1] == "xterm+direct2")
     assert(term.colors == 2^24)
