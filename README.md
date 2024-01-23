@@ -21,20 +21,20 @@ Requirements
 License
 -------
 
-Copyright (C) 2018-2023 Craig Barnes.
+Copyright (C) 2018-2024 Craig Barnes.
 
 This program is free software; you can redistribute it and/or modify it
-under the terms of the GNU [General Public License version 2], as published
+under the terms of the GNU [General Public License version 3], as published
 by the Free Software Foundation.
 
 This program is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
-Public License version 2 for more details.
+Public License version 3 for more details.
 
 
 [Lua]: https://www.lua.org/
-[LPeg]: http://www.inf.puc-rio.br/~roberto/lpeg/lpeg.html
+[LPeg]: https://www.inf.puc-rio.br/~roberto/lpeg/lpeg.html
 [terminfo]: https://invisible-island.net/ncurses/man/terminfo.5.html
 [database]: https://invisible-island.net/ncurses/#download_database
 [ncurses]: https://invisible-island.net/ncurses/
@@ -42,4 +42,4 @@ Public License version 2 for more details.
 [`infocmp`]: https://invisible-island.net/ncurses/man/infocmp.1m.html
 [`tparm(3)`]: https://invisible-island.net/ncurses/man/curs_terminfo.3x.html#h3-Formatting-Output
 [`tputs(3)`]: https://invisible-island.net/ncurses/man/curs_terminfo.3x.html#h3-Output-Functions
-[General Public License version 2]: https://www.gnu.org/licenses/gpl-2.0.html
+[General Public License version 3]: https://www.gnu.org/licenses/gpl-3.0.txt
