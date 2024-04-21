@@ -1,0 +1,1839 @@
+                    dumb:  am
+                 unknown:  am
+                     lpr:
+                glasstty:  am
+                 vanilla:
+                   9term:  am
+             ansi+local1:
+              ansi+local:
+               ansi+tabs:
+           ansi+inittabs:
+              ansi+erase:
+                ansi+rca:
+               ansi+rca2:
+                ansi+cup:
+                ansi+rep:
+               ansi+idl1:
+                ansi+idl:
+               ansi+idc1:
+                ansi+idc:
+             ansi+arrows:
+          ansi+apparrows:
+                ansi+sgr:
+              ansi+sgrso:
+              ansi+sgrul:
+            ansi+sgrbold:
+             ansi+sgrdim:
+                ansi+csr:
+                 ansi+pp:
+                  dec+pp:
+               klone+acs:
+               klone+sgr:
+              klone+sgr8:
+          klone+sgr-dumb:
+           klone+koi8acs:
+             klone+color:
+              ecma+color:
+            ecma+italics:
+                ecma+sgr:
+          ecma+strikeout:
+              ecma+index:
+                   ibcs2:
+                 ansi-mr:  am
+               ansi-mini:  am
+              ansi-mtabs:  am
+                  ansi77:  am
+                pcansi-m:  am
+             pcansi-25-m:  am
+             pcansi-33-m:  am
+             pcansi-43-m:  am
+                  pcansi:  am
+               pcansi-25:  am
+               pcansi-33:  am
+               pcansi-43:  am
+                  ansi-m:  am
+                ansi+cpr:
+                ansi+enq:
+               decid+cpr:
+                    ansi:  am
+            ansi-generic:  am
+            ansi.sys-old:  am
+                ansi.sys:  am
+               ansi.sysk:  am
+               nansi.sys:  am
+              nansi.sysk:  am
+                    tw52:  am
+                  tw52-m:  am
+                    tt52:  am
+              st52-color:  am
+                    st52:  am
+                   tw100:
+                   stv52:  am
+                 stv52pc:  am
+               atari-old:  am
+                 uniterm:  am
+                st52-old:  am
+                  beterm:  am
+             linux-basic:  am
+             linux+decid:
+            linux+sfkeys:
+                 linux-m:  am
+              linux-c-nc:  am
+                 linux-c:  am
+                linux2.2:  am
+                linux2.6:  am
+                linux3.0:  am
+                   linux:  am
+             linux2.6.26:  am
+               linux-nic:  am
+              linux-koi8:  am
+             linux-koi8r:  am
+               linux-lat:  am
+                linux-vt:  am
+                     kon:  am
+                 jfbterm:  am
+                  fbterm:  am
+           linux-16color:  am
+                   bterm:  am
+                    mach:  am
+               mach-bold:  am
+              mach-color:  am
+                mach-gnu:  am
+          mach-gnu-color:  am
+                    hurd:  am  bw
+                     qnx:
+                    qnxt:
+                    qnxm:
+                    qnxw:
+                qnxtmono:
+                   qnxt2:  am
+                 qansi-g:  am
+                   qansi:  am
+                 qansi-t:  am
+                 qansi-m:  am
+                 qansi-w:  am
+             scoansi-old:  am
+             scoansi-new:  am
+                 scoansi:  am
+               iris-ansi:  am
+            iris-ansi-ap:  am
+              iris-color:  am
+              pccon+keys:
+          pccon+sgr+acs0:
+           pccon+sgr+acs:
+            pccon+colors:
+              pccon+base:  am
+                pccon0-m:  am
+                  pccon0:  am
+                 pccon-m:  am
+                   pccon:  am
+                  pcvtXX:  am
+                  pcvt25:  am
+                  pcvt28:  am
+                  pcvt35:  am
+                  pcvt40:  am
+                  pcvt43:  am
+                  pcvt50:  am
+                 pcvt25w:  am
+                 pcvt28w:  am
+                 pcvt35w:  am
+                 pcvt40w:  am
+                 pcvt43w:  am
+                 pcvt50w:  am
+            pcvt25-color:  am
+                  arm100:  am
+                arm100-w:  am
+                    x68k:  am
+                  ofcons:  bw
+                  wsvt25:  am
+                 wsvt25m:  am
+                 netbsd6:  am
+                   rcons:  am
+             rcons-color:  am
+                  mgterm:  am  bw
+                 cons25w:  am  bw
+                  cons25:  am  bw
+           cons25-debian:  am  bw
+                cons25-m:  am  bw
+                  cons30:  am  bw
+                cons30-m:  am  bw
+                  cons43:  am  bw
+                cons43-m:  am  bw
+                  cons50:  am  bw
+                cons50-m:  am  bw
+                  cons60:  am  bw
+                cons60-m:  am  bw
+                 cons25r:  am  bw
+               cons25r-m:  am  bw
+                 cons50r:  am  bw
+               cons50r-m:  am  bw
+                 cons60r:  am  bw
+               cons60r-m:  am  bw
+                cons25l1:  am  bw
+              cons25l1-m:  am  bw
+                cons50l1:  am  bw
+              cons50l1-m:  am  bw
+                cons60l1:  am  bw
+              cons60l1-m:  am  bw
+              teken-2018:  am
+              teken-2022:  am
+          teken-vt+fkeys:
+          teken-sc+fkeys:
+                teken-sc:  am
+                   teken:  am
+           teken-16color:  am
+                 origpc3:  am  bw
+                  oldpc3:
+                bsdos-pc:  am
+         bsdos-pc-nobold:  am
+              bsdos-pc-m:  am
+                     pc3:  am
+                  ibmpc3:  am
+             bsdos-sparc:  am
+               bsdos-ppc:  am
+                    vt52:
+              vt52-basic:
+             vt52+arrows:
+            vt100+keypad:
+            vt100+pfkeys:
+            vt100+fnkeys:
+            vt220+keypad:
+               vt100+enq:
+               vt102+enq:
+                   vt100:  am
+              vt100+4bsd:  am
+                vt100nam:
+                vt100-vb:  am
+                 vt100-w:  am
+             vt100-w-nam:
+               vt100-nav:  am
+             vt100-nav-w:  am
+                 vt100-s:  am
+             vt100-s-bot:  am
+                   vt102:  am
+                 vt102-w:  am
+              vt102-nsgr:  am
+                   vt125:  am
+                   vt131:  am
+                   vt132:  am
+               vt220-old:  am
+            vt220+pcedit:
+            vt220+vtedit:
+              vt220-base:  am
+                   vt220:  am
+                 vt220-w:  am
+              vt220-8bit:  am
+                  vt220d:  am
+               vt220-nam:
+                vt200-js:  am
+                vt320nam:
+                   vt320:  am
+               vt320-nam:
+                 vt320-w:  am
+             vt320-w-nam:
+                   vt340:  am
+              vt420+lrmm:
+                   vt400:  am
+                   vt420:  am
+                 vt420pc:  am
+              vt420pcdos:  am
+                  vt420f:  am
+                   vt510:  am
+                 vt510pc:  am
+              vt510pcdos:  am
+                   vt520:  am
+                   vt525:  am
+               vt520ansi:  am
+               dec-vt100:  am
+               dec-vt220:
+                    z340:  am
+                z340-nam:
+                      tt:
+                nsterm+7:  am  bw
+              nsterm+acs:  am  bw
+              nsterm+mac:  am  bw
+                nsterm+s:
+                nsterm+c:
+              nsterm+c41:
+              nsterm-m-7:  am  bw
+            nsterm-m-s-7:  am  bw
+                nsterm-7:  am  bw
+              nsterm-7-c:  am  bw
+              nsterm-s-7:  am  bw
+            nsterm-c-s-7:  am  bw
+            nsterm-m-acs:  am  bw
+          nsterm-m-s-acs:  am  bw
+              nsterm-acs:  am  bw
+            nsterm-c-acs:  am  bw
+            nsterm-s-acs:  am  bw
+          nsterm-c-s-acs:  am  bw
+                nsterm-m:  am  bw
+              nsterm-m-s:  am  bw
+              nsterm-old:  am  bw
+                nsterm-c:  am  bw
+                nsterm-s:  am  bw
+              nsterm-c-s:  am  bw
+          nsterm-16color:  am
+              nsterm-bce:  am
+         nsterm-build309:  am
+         nsterm-build326:  am
+         nsterm-build343:  am
+         nsterm-build361:  am
+         nsterm-build400:  am
+         nsterm-build440:  am
+                  nsterm:  am
+               iTerm.app:  am
+              iTerm2.app:  am
+            xnuppc+basic:  am
+                xnuppc+c:
+                xnuppc+b:  am
+                xnuppc+f:  am
+               xnuppc+f2:  am
+            xnuppc+80x25:
+            xnuppc+80x30:
+            xnuppc+90x30:
+           xnuppc+100x37:
+           xnuppc+112x37:
+           xnuppc+128x40:
+           xnuppc+128x48:
+           xnuppc+144x48:
+           xnuppc+160x64:
+           xnuppc+200x64:
+           xnuppc+200x75:
+           xnuppc+256x96:
+                xnuppc-m:  am
+                  xnuppc:  am
+              xnuppc-m-b:  am
+                xnuppc-b:  am
+              xnuppc-m-f:  am
+                xnuppc-f:  am
+             xnuppc-m-f2:  am
+               xnuppc-f2:  am
+          xnuppc-80x25-m:  am
+            xnuppc-80x25:  am
+          xnuppc-80x30-m:  am
+            xnuppc-80x30:  am
+          xnuppc-90x30-m:  am
+            xnuppc-90x30:  am
+         xnuppc-100x37-m:  am
+           xnuppc-100x37:  am
+         xnuppc-112x37-m:  am
+           xnuppc-112x37:  am
+         xnuppc-128x40-m:  am
+           xnuppc-128x40:  am
+         xnuppc-128x48-m:  am
+           xnuppc-128x48:  am
+         xnuppc-144x48-m:  am
+           xnuppc-144x48:  am
+         xnuppc-160x64-m:  am
+           xnuppc-160x64:  am
+         xnuppc-200x64-m:  am
+           xnuppc-200x64:  am
+         xnuppc-200x75-m:  am
+           xnuppc-200x75:  am
+         xnuppc-256x96-m:  am
+           xnuppc-256x96:  am
+                     crt:  am
+                    scrt:  am
+                absolute:  am
+                   putty:  am  bw
+            putty+cursor:
+            putty+keypad:
+             vt100-putty:  am
+          putty-256color:  am  bw
+             putty-noapp:  am  bw
+             putty-vt100:  am  bw
+               putty-sco:  am  bw
+            putty+fnkeys:
+        putty+fnkeys+esc:
+      putty+fnkeys+linux:
+      putty+fnkeys+xterm:
+      putty+fnkeys+vt400:
+      putty+fnkeys+vt100:
+        putty+fnkeys+sco:
+                  mintty:  am
+           mintty-direct:  am
+           mintty+common:  am
+             teraterm2.3:  am
+            teraterm4.59:  am
+            teraterm4.97:  am
+       teraterm-256color:  am
+                teraterm:  am
+                ms-vt100:  am
+          ms-vt100-color:  am
+               ms-vt100+:  am
+              ms-vt-utf8:  am
+        ms-vt100-16color:  am
+              winconsole:  am
+             ms-terminal:  am
+                  vscode:  am
+           vscode-direct:  am
+                 x10term:  am
+              x10term+sl:
+                xterm-r5:  am
+                xterm-r6:  am
+               xterm-old:  am
+              xterm-mono:  am
+          xterm-xf86-v32:  am
+          xterm-xf86-v33:  am
+         xterm-xf86-v333:  am
+          xterm-xf86-v40:  am
+          xterm-xf86-v43:  am
+              vt220+cvis:
+             vt220+cvis8:
+            att610+cvis0:
+             att610+cvis:
+          xterm-xf86-v44:  am
+           xterm-xfree86:  am
+           xterm+nofkeys:  am
+              xterm-p370:  am
+              xterm-p371:  am
+               xterm-new:  am
+               xterm+kbs:
+               linux+kbs:
+           xterm+pcfkeys:
+         xterm+nopcfkeys:
+             vt100+noapp:
+             xterm+noapp:
+               xterm+app:
+          vt100+noapp+pc:
+            xterm+app+pc:
+              xterm+pcc3:
+              xterm+pcc2:
+              xterm+pcc1:
+              xterm+pcc0:
+              xterm+pcf0:
+              xterm+pcf2:
+              xterm+pce2:
+              xterm+edit:
+           xterm+decedit:
+           xterm+pc+edit:
+           xterm+vt+edit:
+             xterm+noalt:
+             xterm+alt47:
+           xterm+alt1049:
+        xterm+titlestack:
+         xterm+alt+title:
+            xterm+keypad:
+              xterm+r6f2:
+               xterm+acs:
+             xterm-basic:  am
+              xterm+meta:
+                xterm-xi:  am
+           xterm-16color:  am
+          xterm+256color:
+         xterm+256color2:
+            xterm+osc104:
+          xterm+256setaf:
+           xterm+88color:
+          xterm+88color2:
+          xterm-256color:  am
+           xterm-88color:  am
+           xterm+direct2:
+           xterm-direct2:  am
+            xterm+direct:
+            xterm-direct:  am
+           iterm2-direct:  am
+           mlterm-direct:  am
+          xterm+indirect:
+          konsole-direct:  am
+               st-direct:  am
+              vte-direct:  am
+           nsterm-direct:  am
+          xterm+direct16:
+          xterm-direct16:  am
+         xterm+direct256:
+         xterm-direct256:  am
+              xterm+tmux:
+             xterm+tmux2:
+              xterm-8bit:  am
+                xterm-hp:  am
+               xterm-sco:  am
+             xterm-vt220:  am
+              xterm-vt52:
+             xterm-noapp:  am
+                xterm-24:  am
+                   xterm:  am
+              xterm-utf8:  am
+                xterm+sl:
+            xterm+sl-twm:
+            xterm+sl-alt:
+                  dec+sl:
+              xterm-bold:  am
+               xterm-nic:  am
+                  xterm1:  am
+         bracketed+paste:
+          report+version:
+              report+da2:
+          xterm+x10mouse:
+          xterm-x10mouse:  am
+          xterm+x11mouse:
+          xterm-x11mouse:  am
+         xterm+x11hilite:
+         xterm-x11hilite:  am
+           xterm+sm+1002:
+              xterm-1002:  am
+           xterm+sm+1003:
+              xterm-1003:  am
+             xterm+focus:
+           xterm+sm+1005:
+              xterm-1005:  am
+           xterm+sm+1006:
+              xterm-1006:  am
+        oldxterm+sm+1006:
+                   kterm:  am
+             kterm-color:  am
+                  xtermm:  am
+                  xtermc:  am
+            xterm-pcolor:  am
+                mostlike:  am
+             color_xterm:  am
+                  xgterm:  am
+             xterm-color:  am
+               xterm-sun:  am
+              xterms-sun:  am
+              gnome-rh62:  am
+              gnome-rh72:  am
+              gnome-rh80:  am
+              gnome-rh90:  am
+               gnome-fc5:  am
+                vte-2007:  am
+              gnome-2007:  am
+                vte-2008:  am
+              gnome-2008:  am
+                vte-2012:  am
+              gnome-2012:  am
+             vte+pcfkeys:
+           gnome+pcfkeys:
+                   gnome:  am
+          gnome-256color:  am
+                vte-2014:  am
+                vte-2017:  am
+                vte-2018:  am
+                     vte:  am
+            vte-256color:  am
+                    xfce:  am
+                   hterm:  am
+          hterm-256color:  am
+                 termite:  am
+                     mgt:  am
+                     kvt:  am
+            konsole-base:  am
+           konsole-linux:  am
+         konsole-solaris:  am
+            konsole-xf3x:  am
+            konsole-xf4x:  am
+         konsole+pcfkeys:
+           konsole-vt100:  am
+         konsole-vt420pc:  am
+                 konsole:  am
+         konsole-16color:  am
+        konsole-256color:  am
+                  mlterm:  am
+                 mlterm3:  am
+                 mlterm2:  am
+          mlterm+pcfkeys:
+         mlterm-256color:  am
+              rxvt-basic:  am
+            rxvt+pcfkeys:
+                    rxvt:  am
+           rxvt-256color:  am
+            rxvt-88color:  am
+                rxvt-xpm:  am
+             rxvt-cygwin:  am
+      rxvt-cygwin-native:  am
+            rxvt-16color:  am
+                   mrxvt:  am
+          mrxvt-256color:  am
+                   Eterm:  am  bw
+          Eterm-256color:  am  bw
+           Eterm-88color:  am  bw
+                   aterm:  am
+                  xiterm:  am
+                  hpterm:  am
+            hpterm-color:  am
+           hpterm-color2:  am
+                     emu:  am
+                 emu-220:  am
+                  mvterm:  am
+              mterm-ansi:  am  bw
+                   mterm:  am  bw
+                 decansi:  am
+                 vwmterm:  am
+                     mgr:  am
+                 mgr-sun:  am
+               mgr-linux:  am
+                      st:  am
+                  st-0.8:  am
+                  st-0.7:  am
+                  st-0.6:  am
+              simpleterm:  am
+              st-16color:  am
+             st-256color:  am
+              terminator:
+       terminology-0.6.1:  am
+       terminology-1.0.0:  am
+       terminology-1.8.1:  am
+             terminology:  am
+               alacritty:  am
+        alacritty-direct:  am
+        alacritty+common:  am
+                     rio:  am
+              rio-direct:  am
+                   kitty:  am
+            kitty-direct:  am
+            kitty+common:  am
+             kitty+setal:
+                    foot:  am  bw
+             foot-direct:  am  bw
+               foot+base:  am  bw
+                 domterm:  am
+                 wezterm:  am
+                 contour:  am
+          contour-direct:  am
+                  cbunix:  am
+                 vremote:
+                     pty:  am
+                   eterm:  am
+             eterm-color:  am
+         dumb-emacs-ansi:  am
+             screen-base:  am
+                  screen:  am
+             no+brackets:
+              screen-bce:  am
+                screen-s:  am
+          screen-16color:  am
+        screen-16color-s:  am
+      screen-16color-bce:  am
+    screen-16color-bce-s:  am
+         screen-256color:  am
+       screen-256color-s:  am
+     screen-256color-bce:  am
+   screen-256color-bce-s:  am
+   screen.xterm-256color:  am  bw
+ screen.konsole-256color:  am
+     screen.vte-256color:  am
+   screen.putty-256color:  am  bw
+  screen.mlterm-256color:  am
+            screen+fkeys:
+          screen+italics:
+    screen.xterm-xfree86:  am  bw
+         screen.xterm-r6:  am  bw
+         screen.teraterm:  am
+             screen.rxvt:  am  bw
+            screen.Eterm:  am  bw
+            screen.mrxvt:  am
+              screen.vte:  am
+            screen.gnome:  am
+          screen.konsole:  am
+            screen.linux:  am  bw
+           screen.mlterm:  am
+            screen.putty:  am  bw
+    screen-bce.xterm-new:  am  bw
+         screen-bce.rxvt:  am  bw
+        screen-bce.Eterm:  am  bw
+        screen-bce.mrxvt:  am
+        screen-bce.gnome:  am
+      screen-bce.konsole:  am
+        screen-bce.linux:  am  bw
+                screen-w:  am
+                 screen2:
+                 screen3:
+                 screen4:  am
+                 screen5:  am
+                    tmux:  am
+           tmux-256color:  am
+             tmux-direct:  am
+                    mosh:  am
+           mosh-256color:  am
+                    dvtm:  am
+           dvtm-256color:  am
+                  ncsa-m:  am
+                    ncsa:  am
+                 ncsa-ns:  am
+               ncsa-m-ns:  am
+              ncsa-vt220:  am
+                   pilot:  am
+           elks-glasstty:  am
+               elks-vt52:  am
+               elks-ansi:  am
+                    elks:  am
+                    sibo:  am
+                  pccons:  am
+                  oldsun:  am
+                  sun-il:  am
+               sun-cgsix:  am
+                     sun:  am
+                  sun+sl:
+                   sun-s:  am
+                 sun-e-s:  am
+                  sun-48:  am
+                  sun-34:  am
+                  sun-24:  am
+                  sun-17:  am
+                  sun-12:  am
+                   sun-1:  am
+                   sun-e:  am
+                   sun-c:  am
+               sun-type4:  am
+               sun-color:  am
+                  wsiris:  am
+                  psterm:  am
+            psterm-96x48:  am
+            psterm-90x28:  am
+            psterm-80x24:  am
+             psterm-fast:  am
+                    next:  am
+               nextshell:  am
+                news-unk:  am
+                 news-29:  am
+             news-29-euc:  am
+            news-29-sjis:  am
+                 news-33:  am
+             news-33-euc:  am
+            news-33-sjis:  am
+                 news-42:  am
+             news-42-euc:  am
+            news-42-sjis:  am
+            news-old-unk:  am
+                  nwp512:  am
+                nwp512-a:  am
+                  nwp513:  am
+                nwp513-a:  am
+                  news28:  am
+                  news29:  am
+                  nwp511:  am
+                  nwp517:  am
+                nwp517-w:  am
+                  dtterm:  am
+                emx-base:  am  bw
+                ansi-emx:  am  bw
+        ansi-color-2-emx:  am  bw
+        ansi-color-3-emx:  am  bw
+                mono-emx:  am
+               cygwinB19:  am
+                  cygwin:  am
+               cygwinDBG:  am
+                   djgpp:  am
+                djgpp203:  am
+                djgpp204:  am
+                    uwin:  am
+                 ansi-nt:  am  bw
+                    pcmw:  am
+                 interix:  am
+               opennt-35:  am
+               opennt-50:  am
+               opennt-60:  am
+              opennt-100:  am
+                opennt-w:  am
+             opennt-35-w:  am
+             opennt-50-w:  am
+             opennt-60-w:  am
+             opennt-w-vt:  am
+             interix-nti:  am
+           opennt-35-nti:  am
+           opennt-50-nti:  am
+           opennt-60-nti:  am
+          opennt-100-nti:  am
+                  altos2:
+                  altos3:
+                  altos4:  am  bw
+                  altos7:  am
+                altos7pc:  am
+               hpgeneric:  am
+                   hp110:  am
+               hp+pfk+cr:
+               hp+pfk-cr:
+           hp+pfk+arrows:
+               hp+arrows:
+                  hp262x:
+               hp2621-ba:  am
+                  hp2621:  am
+               hp2621-fl:  am
+                 hp2621p:  am
+               hp2621p-a:  am
+              hp2621-k45:  am
+               hp2621-48:  am
+               hp2621-nl:  am
+               hp2621-nt:  am
+                  hp2624:  am  bw
+                  hp2626:  am  bw
+                hp2626-s:  am  bw
+               hp2626-ns:  am  bw
+               hp2626-12:  am  bw
+            hp2626-12x40:  am  bw
+              hp2626-x40:  am  bw
+             hp2626-12-s:  am  bw
+             hp2627a-rev:  am
+                 hp2627a:  am
+                 hp2627c:  am
+                 hp2640a:  am
+                 hp2640b:  am
+                 hp2641a:  am
+                  hp2645:  am
+                  hp2648:  am
+                   hp150:  am  bw
+                 hp2382a:  am  bw
+                hp2621-a:  am
+           newhpkeyboard:
+                   newhp:  am  bw
+                   memhp:  am  bw
+                   scrhp:  am  bw
+               hp+labels:
+              hp+printer:
+                 hp2621b:  am
+               hp2621b-p:  am
+              hp2621b-kx:  am
+            hp2621b-kx-p:  am
+                  hp2622:  am  bw
+                  hp2623:  am  bw
+               hp2624b-p:  am  bw
+              hp2624-10p:  am  bw
+           hp2624b-10p-p:  am  bw
+                hp+color:
+                 hp2397a:  am  bw
+                  hpansi:  am
+                  hp2392:  am
+                   hpsub:  am
+                    hpex:  am
+                     hp2:  am
+                   hp236:  am
+                  hp300h:  am
+                  hp9837:  am
+                  hp9845:  am
+                 hp98550:  am
+           hp98550-color:  am
+                hp700-wy:  am  bw
+                 hp70092:  am
+                  bobcat:  am
+                 gator-t:  bw
+                   gator:  bw
+                gator-52:
+               gator-52t:
+            dku7003-dumb:
+                 dku7003:
+                   adm1a:  am
+                    adm2:  am
+                    adm3:  am
+                   adm3a:  am
+                  adm3a+:  am
+                    adm5:  am
+                 adm+sgr:
+                   adm11:  am
+                   adm12:  am
+                   adm20:  am
+                   adm21:  am
+                   adm22:  am
+                   adm31:  am
+               adm31-old:  am
+                   adm36:  am
+                   adm42:  am
+                adm42-ns:  am
+                 adm1178:  am
+                   pt100:  am  bw
+                  pt100w:  am  bw
+                   pt250:  am  bw
+                  pt250w:  am  bw
+                  qvt101:  am  bw
+                 qvt101+:  am  bw
+                  qvt102:  am  bw
+                  qvt103:  am
+                qvt103-w:  am
+                 qvt119+:  am
+              qvt119+-25:  am
+               qvt119+-w:  am
+            qvt119+-25-w:  am
+                  qvt203:  am
+                qvt203-w:  am
+               qvt203-25:  am
+             qvt203-25-w:  am
+                  tvi803:  am
+                  tvi910:  am
+                 tvi910+:  am
+                  tvi912:  am
+                tvi912cc:  am  bw
+             tvi912b-unk:  am  bw
+         tvi912b+printer:
+             tvi912b+dim:
+              tvi912b+mc:
+              tvi912b+2p:
+              tvi912b+vb:
+              tvi920b+fn:
+          tvi912b-2p-unk:  am  bw
+          tvi912b-vb-unk:  am  bw
+               tvi912b-p:  am  bw
+            tvi912b-2p-p:  am  bw
+            tvi912b-vb-p:  am  bw
+              tvi912b-2p:  am  bw
+           tvi912b-2p-mc:  am  bw
+              tvi912b-vb:  am  bw
+           tvi912b-vb-mc:  am  bw
+                 tvi912b:  am  bw
+              tvi912b-mc:  am  bw
+             tvi920b-unk:  am  bw
+          tvi920b-2p-unk:  am  bw
+          tvi920b-vb-unk:  am  bw
+               tvi920b-p:  am  bw
+            tvi920b-2p-p:  am  bw
+            tvi920b-vb-p:  am  bw
+              tvi920b-2p:  am  bw
+           tvi920b-2p-mc:  am  bw
+              tvi920b-vb:  am  bw
+           tvi920b-vb-mc:  am  bw
+                 tvi920b:  am  bw
+              tvi920b-mc:  am  bw
+                  tvi921:  am
+                  tvi92B:  am
+                  tvi92D:  am
+                  tvi924:  am  bw
+                  tvi925:  am  bw
+               tvi925-hi:  am  bw
+                  tvi950:  am
+               tvi950-2p:  am
+               tvi950-4p:  am
+               tvi950-rv:  am
+            tvi950-rv-2p:  am
+            tvi950-rv-4p:  am
+                  tvi955:  am
+                tvi955-w:  am
+               tvi955-hb:  am
+                  tvi970:  am
+               tvi970-vb:  am
+               tvi970-2p:  am
+                   tvipt:  am
+                 tvi9065:  am  bw
+                    vi50:  am
+                 vi50adm:  am
+                    vi55:  am
+                   vi200:  am
+                 vi200-f:  am
+                vi200-rv:  am
+                   vi300:  am  bw
+               vi300-old:  am  bw
+                   vi500:  am
+                   vi550:  am  bw
+                   vi603:  am
+                    wy30:  am  bw
+                 wy30-mc:  am  bw
+                 wy30-vb:  am  bw
+                    wy50:  am  bw
+                 wyse+sl:
+                 wy50-mc:  am  bw
+                 wy50-vb:  am  bw
+                  wy50-w:  am  bw
+                wy50-wvb:  am  bw
+                   wy350:  am  bw
+                wy350-vb:  am  bw
+                 wy350-w:  am  bw
+               wy350-wvb:  am  bw
+                   wy100:
+                   wy120:  am  bw
+                 wy120-w:  am  bw
+                wy120-25:  am  bw
+              wy120-25-w:  am  bw
+                wy120-vb:  am  bw
+              wy120-w-vb:  am  bw
+                    wy60:  am  bw
+                  wy60-w:  am  bw
+                 wy60-25:  am  bw
+               wy60-25-w:  am  bw
+                 wy60-42:  am  bw
+               wy60-42-w:  am  bw
+                 wy60-43:  am  bw
+               wy60-43-w:  am  bw
+                 wy60-vb:  am  bw
+               wy60-w-vb:  am  bw
+                  wy99gt:  am  bw
+                wy99gt-w:  am  bw
+               wy99gt-25:  am  bw
+             wy99gt-25-w:  am  bw
+               wy99gt-vb:  am  bw
+             wy99gt-w-vb:  am  bw
+               wy99-ansi:  am
+              wy99a-ansi:  am
+                   wy99f:  am  bw
+                  wy99fa:  am  bw
+                   wy160:  am  bw
+                 wy160-w:  am  bw
+                wy160-25:  am  bw
+              wy160-25-w:  am  bw
+                wy160-42:  am  bw
+              wy160-42-w:  am  bw
+                wy160-43:  am  bw
+              wy160-43-w:  am  bw
+                wy160-vb:  am  bw
+              wy160-w-vb:  am  bw
+                    wy75:  am
+                 wy75-mc:  am
+                 wy75-vb:  am
+                  wy75-w:  am
+                wy75-wvb:  am
+                    wy85:  am
+                 wy85-vb:  am
+                  wy85-w:  am
+                wy85-wvb:  am
+               wy85-8bit:  am
+                   wy185:  am
+                wy185-24:  am
+                wy185-vb:  am
+                 wy185-w:  am
+               wy185-wvb:  am
+                   wy325:  am  bw
+                wy325-vb:  am  bw
+                 wy325-w:  am  bw
+                wy325-25:  am  bw
+               wy325-25w:  am  bw
+              wy325-w-vb:  am  bw
+                wy325-42:  am  bw
+               wy325-42w:  am  bw
+            wy325-42w-vb:  am  bw
+                wy325-43:  am  bw
+               wy325-43w:  am  bw
+            wy325-43w-vb:  am  bw
+                wy370-nk:  am
+                   wy370:  am
+              wy370-105k:  am
+               wy370-EPC:  am
+                wy370-vb:  am
+                 wy370-w:  am
+               wy370-wvb:  am
+                wy370-rv:  am
+              wy99gt-tek:  am
+               wy160-tek:  am
+               wy370-tek:  am
+                   wy520:  am
+                wy520-24:  am
+                wy520-vb:  am
+                 wy520-w:  am
+               wy520-wvb:  am
+               wy520-epc:  am
+            wy520-epc-24:  am
+            wy520-epc-vb:  am
+             wy520-epc-w:  am
+           wy520-epc-wvb:  am
+                wy520-36:  am
+                wy520-48:  am
+               wy520-36w:  am
+               wy520-48w:  am
+              wy520-36pc:  am
+              wy520-48pc:  am
+             wy520-36wpc:  am
+             wy520-48wpc:  am
+                 wyse-vp:  am
+                  wy75ap:  am
+                  wy100q:
+                  kermit:
+               kermit-am:  am
+                pckermit:  am
+             pckermit120:
+                  msk227:
+                msk227am:  am
+                msk22714:  am
+                vt320-k3:  am
+              vt320-k311:  am
+                 avatar0:  am
+                avatar0+:  am
+                  avatar:  am
+                  rbcomm:  am  bw
+              rbcomm-nam:  bw
+                rbcomm-w:  am  bw
+                  MtxOrb:
+               MtxOrb204:
+               MtxOrb162:
+                 att2300:  am
+                 att2350:  am
+               att5410v1:  am
+             att4410v1-w:  am
+                 att4410:  am
+               att5410-w:  am
+                   v5410:  am
+                 att4415:  am
+               att4415-w:  am
+              att4415-rv:  am
+            att4415-w-rv:  am
+              att4415+nl:
+              att4415-nl:  am
+           att4415-rv-nl:  am
+            att4415-w-nl:  am
+          att4415-w-rv-n:  am
+               att5420_2:  am
+             att5420_2-w:  am
+                 att4418:  am
+               att4418-w:  am
+                 att4420:
+                 att4424:  am
+               att4424-1:  am
+                att4424m:  am
+                 att5425:  am
+              att5425-nl:  am
+               att5425-w:  am
+                 att4426:  am
+                 att510a:  am
+                 att510d:  am
+                  att500:  am
+                 att5310:
+               att5620-1:  am
+                 att5620:  am
+              att5620-24:  am
+              att5620-34:  am
+               att5620-s:  am
+                  att605:  am
+               att605-pc:  am
+                att605-w:  am
+                  att610:  am
+                att610-w:  am
+             att610-103k:  am
+           att610-103k-w:  am
+                  att615:  am
+                att615-w:  am
+             att615-103k:  am
+           att615-103k-w:  am
+                  att620:  am
+                att620-w:  am
+             att620-103k:  am
+           att620-103k-w:  am
+                  att630:  am
+               att630-24:  am
+                  att700:  am
+                  att730:  am
+               att730-41:  am
+               att730-24:  am
+                 att730r:  am
+              att730r-41:  am
+              att730r-24:  am
+                  att505:  am
+               att505-24:  am
+               att505-22:  am
+                 ampex80:  am  bw
+                ampex175:  am
+              ampex175-b:  am
+                ampex210:  am
+                ampex219:
+               ampex219w:
+                ampex232:  am
+               ampex232w:  am
+            annarbor4080:  am
+                 aas1901:  am
+                 aaa+unk:  am
+                  aaa+rv:
+                 aaa+dec:
+                  aaa-18:  am
+               aaa-18-rv:  am
+                  aaa-20:  am
+                  aaa-22:  am
+                  aaa-24:  am
+               aaa-24-rv:  am
+                  aaa-26:  am
+                  aaa-28:  am
+                aaa-30-s:  am
+             aaa-30-s-rv:  am
+              aaa-s-ctxt:  am
+           aaa-s-rv-ctxt:  am
+                     aaa:  am
+               aaa-30-rv:  am
+             aaa-30-ctxt:  am
+          aaa-30-rv-ctxt:  am
+                  aaa-36:  am
+               aaa-36-rv:  am
+                  aaa-40:  am
+               aaa-40-rv:  am
+                  aaa-48:  am
+               aaa-48-rv:  am
+                aaa-60-s:  am
+             aaa-60-s-rv:  am
+           aaa-60-dec-rv:  am
+                  aaa-60:  am
+               aaa-60-rv:  am
+                  aaa-db:  am
+                    guru:  am
+                 guru+rv:
+                 guru-rv:  am
+                  guru+s:
+              guru-nctxt:  am
+                  guru-s:  am
+                 guru-24:  am
+                 guru-44:  am
+               guru-44-s:  am
+                 guru-76:  am
+               guru-76-s:  am
+              guru-76-lp:  am
+               guru-76-w:  am
+             guru-76-w-s:  am
+              guru-76-wm:  am
+              aaa-rv-unk:
+                  regent:  am
+               regent100:  am
+                regent20:  am
+                regent25:  am
+                regent40:  am
+               regent40+:  am
+                regent60:  am
+               viewpoint:  am
+              screwpoint:  am
+                   vp3a+:  am  bw
+                    vp60:  am
+                    vp90:  bw
+                 adds980:  am
+                   cit80:  am
+                  cit101:  am
+                 cit101e:  am
+              cit101e-rv:  am
+               cit101e-n:
+             cit101e-132:  am
+            cit101e-n132:
+                  cit500:
+                   citoh:
+              citoh-pica:
+             citoh-elite:
+              citoh-comp:
+              citoh-prop:
+              citoh-6lpi:
+              citoh-8lpi:
+                  cdc456:  am
+                  cdc721:  am
+                cdc721ll:  am
+                  cdc752:  am  bw
+                  cdc756:  am  bw
+              cdc721-esc:  am  bw
+                  visa50:  bw
+                    c108:  am
+                 c108-4p:  am
+                 c108-rv:  am
+              c108-rv-4p:  am
+                  c108-w:  am
+                    c100:  am
+                 c100-rv:  am
+                   oc100:  am
+                  hds200:  am  bw
+                  avt-ns:  am
+               avt-rv-ns:  am
+                avt-w-ns:  am
+             avt-w-rv-ns:  am
+                   avt+s:
+                     avt:  am
+                  avt-rv:  am
+                   avt-w:  am
+                avt-w-rv:  am
+               contel300:  am
+               contel301:  am
+               dgkeys+8b:
+               dgkeys+7b:
+               dgkeys+11:
+               dgkeys+15:
+            dgunix+fixed:
+                dg+fixed:
+               dg+color8:
+                dg+color:
+           dgmode+color8:
+            dgmode+color:
+              dgunix+ccc:
+                  dg+ccc:
+              dg-generic:  am  bw
+                   dg200:  am  bw
+                   dg210:  am
+                   dg211:  am  bw
+                   dg450:  am  bw
+              dg460-ansi:  am
+              dg6053-old:  am  bw
+                  dg6053:  am  bw
+                    d200:  am  bw
+                    d210:  am  bw
+                 d210-dg:  am  bw
+                    d211:  am  bw
+                 d211-7b:  am  bw
+                 d211-dg:  am  bw
+                 d216-dg:  am  bw
+               d216-unix:  am  bw
+            d216-unix-25:  am  bw
+               d217-unix:  am  bw
+            d217-unix-25:  am  bw
+                    d220:  am  bw
+                 d220-7b:  am  bw
+                 d220-dg:  am  bw
+                   d230c:  am  bw
+                d230c-dg:  am  bw
+                    d400:  am  bw
+                    d410:  am  bw
+                 d410-7b:  am  bw
+                 d410-dg:  am  bw
+                  d410-w:  am  bw
+               d410-7b-w:  am  bw
+                 d412-dg:  am  bw
+               d412-unix:  am  bw
+             d412-unix-w:  am  bw
+            d412-unix-25:  am  bw
+             d412-unix-s:  am  bw
+            d412-unix-sr:  am  bw
+               d413-unix:  am  bw
+             d413-unix-w:  am  bw
+            d413-unix-25:  am  bw
+             d413-unix-s:  am  bw
+            d413-unix-sr:  am  bw
+               d414-unix:  am  bw
+             d414-unix-w:  am  bw
+            d414-unix-25:  am  bw
+             d414-unix-s:  am  bw
+            d414-unix-sr:  am  bw
+                d430c-dg:  am  bw
+            d430c-dg-ccc:  am  bw
+              d430c-unix:  am  bw
+            d430c-unix-w:  am  bw
+           d430c-unix-25:  am  bw
+            d430c-unix-s:  am  bw
+           d430c-unix-sr:  am  bw
+          d430c-unix-ccc:  am  bw
+        d430c-unix-w-ccc:  am  bw
+       d430c-unix-25-ccc:  am  bw
+        d430c-unix-s-ccc:  am  bw
+       d430c-unix-sr-ccc:  am  bw
+                   d470c:  am  bw
+                d470c-7b:  am  bw
+                d470c-dg:  am  bw
+                    d555:  am  bw
+                 d555-7b:  am  bw
+                  d555-w:  am  bw
+               d555-7b-w:  am  bw
+                 d555-dg:  am  bw
+                    d577:  am  bw
+                 d577-7b:  am  bw
+                  d577-w:  am  bw
+               d577-7b-w:  am  bw
+                 d577-dg:  am  bw
+                    d578:  am  bw
+                 d578-7b:  am  bw
+                    cs10:
+                  cs10-w:
+                  dm1520:  am
+                  dm2500:
+                  dmchat:
+                  dm3025:
+                  dm3045:  am
+                    dm80:  am
+                   dm80w:  am
+                dt80-sas:  am  bw
+                 excel62:  am
+               excel62-w:  am
+              excel62-rv:  am
+                   falco:  am
+                 falco-p:  am
+                   ts100:  am
+              ts100-ctxt:  am
+                  beacon:  am
+                   f1720:
+                    f100:  am  bw
+                 f100-rv:  am  bw
+                    f110:  am
+                 f110-14:  am
+                  f110-w:  am
+                f110-14w:  am
+                    f200:  am
+                  f200-w:  am
+                  f200vi:  am
+                f200vi-w:  am
+                   go140:
+                  go140w:  am
+                   go225:  am
+                     sb1:  am  bw
+                     sbi:  am  bw
+            superbee-xsb:  am
+              superbeeic:  am
+                     sb2:  am  bw
+                 beehive:  am
+                beehive3:  am
+                beehive4:  am
+                  microb:  am
+                  ha8675:  am
+                  ha8686:  am
+                  hz1000:
+                  hz1420:  am
+                  hz1500:  am
+                  hz1510:  am
+                  hz1520:  am  bw
+            hz1520-noesc:  am
+                  hz1552:
+               hz1552-rv:
+                  hz2000:  am
+                  esprit:  am  bw
+               esprit-am:  am  bw
+                   hmod1:  am
+                   hazel:  am
+                 ibm327x:
+                 ibm3101:  am
+                 ibm3151:  am
+                 ibm3161:  am
+               ibm3161-C:  am
+                 ibm3162:  am
+                 ibm3164:  am
+                 ibm5151:  am  bw
+                  ibmaed:  am
+                 ibm-apl:  am
+                 ibmmono:  am
+                  ibmega:  am
+               ibm+color:
+             ibm+16color:
+                 ibm5154:  am  bw
+                ibmega-c:  am
+                ibmvga-c:  am
+                  ibmvga:  am
+                    rtpc:  am
+                 ibm6155:  am  bw
+                ibmapa8c:  am
+              ibmapa8c-c:  am
+                 ibm6154:  am  bw
+                 ibm6153:  am  bw
+              ibm6153-90:  am  bw
+              ibm6153-40:  am  bw
+                 ibm8512:  am  bw
+                   hft-c:  am  bw
+               hft-c-old:  am  bw
+                 hft-old:  am
+             ibm-system1:  am
+                     lft:  am  bw
+                 ibm5081:  am  bw
+               ibm5081-c:  am
+                 ibm8503:  am  bw
+                 ibm8514:  am  bw
+               ibm8514-c:  am
+                 aixterm:  am  bw
+              aixterm+sl:
+               aixterm-m:  am  bw
+           aixterm-m-old:  am  bw
+                jaixterm:  am  bw
+              jaixterm-m:  am  bw
+         aixterm-16color:  am  bw
+                    i100:  am
+                    i400:  am
+                addrinfo:  am
+                infoton2:  am
+                 infoton:  am
+                 icl6404:  am
+               icl6404-w:  am
+                  intext:  am
+                 intext2:  am  bw
+                   abm85:  am  bw
+                  abm85h:  am  bw
+                  abm85e:  am  bw
+              abm85h-old:  am  bw
+                     kt7:  am
+                   kt7ix:  am  bw
+                  prism2:  am  bw
+                  prism4:  am  bw
+                  prism5:  am  bw
+                  prism7:  am  bw
+                  prism8:  am  bw
+                prism8-w:  am  bw
+                  prism9:  am  bw
+                prism9-w:  am  bw
+                prism9-8:  am  bw
+              prism9-8-w:  am  bw
+                 prism12:  am  bw
+               prism12-w:  am  bw
+               prism12-m:  am  bw
+             prism12-m-w:  am  bw
+                 prism14:  am  bw
+               prism14-w:  am  bw
+               prism14-m:  am  bw
+             prism14-m-w:  am  bw
+                    p8gl:  am  bw
+                    act4:  am
+                    act5:  am
+                 mime-fb:  am
+                 mime-hb:  am
+                    mime:  am
+                mime2a-s:  am
+                  mime2a:
+                  mime3a:
+                 mime3ax:
+                 mime314:  am
+                   mm340:
+               mt4520-rv:  am
+                ergo4000:
+             ncr260intan:  am
+            ncr260intwan:  am
+             ncr260intpp:  am
+            ncr260intwpp:  am
+              ncr260vppp:  am  bw
+             ncr260vp+sl:
+             ncr260vpwpp:  am  bw
+           ncr260vt100an:  am
+             ncr260vt+sl:
+          ncr260vt100wan:  am
+           ncr260vt100pp:  am
+          ncr260vt100wpp:  am
+           ncr260vt200an:  am
+          ncr260vt200wan:  am
+           ncr260vt200pp:  am
+          ncr260vt200wpp:  am
+           ncr260vt300an:  am
+          ncr260vt300wan:  am
+           ncr260vt300pp:  am
+          ncr260vt300wpp:  am
+           ncr260wy325pp:  am  bw
+          ncr260wy325wpp:  am  bw
+           ncr260wy350pp:  am  bw
+          ncr260wy350wpp:  am  bw
+           ncr260wy50+pp:  am  bw
+          ncr260wy50+wpp:  am  bw
+            ncr260wy60pp:  am  bw
+           ncr260wy60wpp:  am  bw
+              ncr160vppp:  am  bw
+             ncr160vpwpp:  am  bw
+           ncr160vt100an:  am
+           ncr160vt100pp:  am
+          ncr160vt100wan:  am
+          ncr160vt100wpp:  am
+           ncr160vt200an:  am
+           ncr160vt200pp:  am
+          ncr160vt200wan:  am
+          ncr160vt200wpp:  am
+           ncr160vt300an:  am
+           ncr160vt300pp:  am
+          ncr160vt300wan:  am
+          ncr160vt300wpp:  am
+           ncr160wy50+pp:  am  bw
+          ncr160wy50+wpp:  am  bw
+            ncr160wy60pp:  am  bw
+           ncr160wy60wpp:  am  bw
+              ncrvt100an:  am
+             ncrvt100wan:  am
+                ncr7900i:  am  bw
+               ncr7900iv:  am  bw
+                 ncr7901:  am  bw
+                 ndr9500:  am  bw
+              ndr9500-nl:  am  bw
+              ndr9500-25:  am  bw
+           ndr9500-25-nl:  am  bw
+              ndr9500-mc:  am  bw
+           ndr9500-25-mc:  am  bw
+           ndr9500-mc-nl:  am  bw
+        ndr9500-25-mc-nl:  am  bw
+                  bantam:
+                     fox:  am
+                     owl:  am
+                  pe1251:  am
+                 pe7000m:  am
+                 pe7000c:  am
+                   uts30:  am  bw
+              tandem6510:  am
+               tandem653:  am
+                  dmterm:  am  bw
+                   dt100:
+                  dt100w:
+                   dt110:
+                   pt210:
+                     tek:
+                 tek4013:
+                 tek4014:
+                 tek4015:
+              tek4014-sm:
+              tek4015-sm:
+                 tek4023:  am
+                 tek4024:  am
+              tek4025-17:  am
+           tek4025-17-ws:  am
+              tek4025-ex:  am
+                tek4025a:  am  bw
+              tek4025-cr:  am
+               tek4025ex:  am
+                 tek4105:  am
+              tek4105-30:  am
+                tek4105a:
+              tek4106brl:
+                 tek4107:  am
+               tek4207-s:  am
+                otek4112:  am
+                 tek4112:  am
+              tek4112-nd:  am
+               tek4112-5:  am
+                 tek4113:  am
+              tek4113-34:  am
+              tek4113-nd:  am
+                otek4115:  am
+                 tek4115:  am
+                 tek4125:  am
+                 tek4207:  am  bw
+                 tek4404:
+                  ct8500:  am  bw
+                 tek4205:
+                   tty33:
+                   tty37:
+                   tty40:
+                   tty43:  am
+                 scanset:  am  bw
+                   vc303:  am
+                  vc303a:  am
+                   vc404:  am
+                 vc404-s:  am
+                   vc414:  am
+                   vc415:  am
+                  pcplot:  am
+                  kaypro:  am
+                  ibm-pc:  am
+                   ibmpc:  am  bw
+               appleIIgs:  am  bw
+                 apple2e:  bw
+               apple2e-p:  bw
+                apple-ae:  am  bw
+                 appleII:  am
+                apple-80:  am  bw
+             apple-soroc:  am
+             apple-videx:  am
+          apple-uterm-vb:  am
+             apple-uterm:  am
+                apple80p:  am  bw
+            apple-videx2:  am
+            apple-videx3:  am
+                   aepro:
+              apple-vm80:
+                    lisa:  am
+                   liswb:  am
+                lisaterm:  am
+              lisaterm-w:  am
+                     mac:  am
+                   mac-w:  am
+                   coco3:  am
+                    trs2:  am
+                   trs16:  am
+                   amiga:  am  bw
+                 amiga-h:  bw
+              amiga-8bit:  bw
+               amiga-vnc:  am
+                 morphos:  bw
+               commodore:  am  bw
+               northstar:
+               osborne-w:
+                 osborne:  am
+                  osexec:  am
+                   minix:  am
+               minix-3.0:  am
+               minix-1.7:  am
+               minix-old:
+            minix-old-am:  am
+                pc-minix:  am
+             pc-coherent:  am
+                pc-venix:
+                     mai:  am
+                   basis:  am
+                    luna:  am
+                 megatek:  am
+                xerox820:  am
+                  m2-nam:
+                minitel1:  am  bw
+               minitel1b:  am  bw
+            minitel1b-80:
+             minitel1-nb:  am  bw
+            minitel1b-nb:  am  bw
+             minitel2-80:
+            minitel12-80:
+         screen.minitel1:  am
+        screen.minitel1b:  am
+     screen.minitel1b-80:  am
+      screen.minitel1-nb:  am
+     screen.minitel1b-nb:  am
+                linux-m1:  am
+               linux-m1b:  am
+                linux-m2:  am
+                 linux-s:  am
+         screen.linux-m1:  am
+        screen.linux-m1b:  am
+         screen.linux-m2:  am
+                putty-m1:  am
+               putty-m1b:  am
+                putty-m2:  am
+            putty+screen:
+            putty-screen:  am  bw
+         screen.putty-m1:  am
+        screen.putty-m1b:  am
+         screen.putty-m2:  am
+                viewdata:  am  bw
+              viewdata-o:  am  bw
+             viewdata-rv:  am  bw
+                   abm80:  am  bw
+                    blit:  am
+                  cbblit:  am
+                   oblit:  am
+                bitgraph:
+                 bg2.0rv:
+                   bg2.0:
+                bg1.25rv:
+                bg1.25nv:
+                  bg1.25:
+             tws-generic:  am
+             tws2102-sna:  am
+                 tws2103:  am
+             tws2103-sna:  am
+             dku7102-old:  am
+                 dku7202:  am
+                   bq300:  am
+                bq300-rv:  am
+                 bq300-w:  am
+              bq300-w-rv:  am
+                 bq300-8:  am
+               bq300-8rv:  am
+                bq300-8w:  am
+             bq300-w-8rv:  am
+                bq300-pc:  am
+             bq300-pc-rv:  am
+              bq300-pc-w:  am
+           bq300-pc-w-rv:  am
+              bq300-8-pc:  am
+           bq300-8-pc-rv:  am
+            bq300-8-pc-w:  am
+         bq300-8-pc-w-rv:  am
+                     vip:  am
+                   vip-w:  am
+                   vip-H:  am
+                  vip-Hw:  am
+                  cg7900:  am
+                 ca22851:  am
+                   cyb83:  am
+                  cyb110:  am
+                  dp3360:  am
+                  dp8242:
+             vt52+keypad:
+                    gt40:
+                    gt42:
+                    vt50:
+                   vt50h:
+                    vt61:
+                    gigi:  am
+                  pro350:
+                     dw1:
+                     dw2:
+                     dw3:
+                     dw4:  am
+                    ln03:
+                  ln03-w:
+                   delta:  am
+                     ddr:  am
+                   ps300:  am
+            terminet1200:
+                   h19-a:  am
+                  h19-bs:  am
+                  h19-us:  am
+                     h19:  am
+                   h19-u:  am
+                   h19-g:  am
+                alto-h19:  am
+                     z29:  am
+                    z29a:  am
+              z29a-kc-uc:  am
+             z29a-nkc-bc:  am
+             z29a-nkc-uc:  am
+                   z39-a:  am
+                    z100:
+                  z100bw:
+                     p19:  am
+                     ztx:  am
+                ims950-b:  am
+                  ims950:  am
+               ims950-rv:  am
+                ims-ansi:  am
+              superbrain:  am  bw
+               intertube:  am
+              intertube2:  am
+                 graphos:  am
+              graphos-30:  am
+                modgraph:  am
+               modgraph2:  am
+              modgraph48:  am
+                    mt70:  am
+                   ex155:  am  bw
+                   omron:  am
+                  rt6221:
+                rt6221-w:
+                     rca:
+                hirez100:
+              hirez100-w:
+                     vsc:  am
+                soroc120:  am
+                soroc140:  am
+                    swtp:  am
+                synertek:  am
+                  tab132:  am
+                tab132-w:  am
+               tab132-rv:  am
+             tab132-w-rv:  am
+                   t3700:
+                   t3800:
+                   t1061:  am
+                  t1061f:  am
+                     t10:
+                     t16:  am
+                   ti700:
+                   ti703:  am
+                 ti703-w:  am
+                   ti916:  am
+                 ti916-8:  am
+               ti916-132:  am
+             ti916-8-132:  am
+                   ti924:  am
+                 ti924-8:  am
+                  ti924w:  am
+                ti924-8w:  am
+                   ti931:  am
+                   ti926:  am
+                 ti926-8:  am
+                 ti_ansi:  am
+                   ti928:  am
+                 ti928-8:  am
+                   zen30:  am
+                   zen50:  am
+                     cci:  am  bw
+                  apollo:  am
+            apollo+vt132:  am
+              apollo_15P:  am
+              apollo_19L:  am
+            apollo_color:  am
+                 att6386:  am  bw
+              pc6300plus:  am
+                 att7300:  am
+                     aws:  am
+                    awsc:  am
+                    qdss:  am
+                     fos:  am  bw
+                masscomp:
+               masscomp1:
+               masscomp2:
+                  pmcons:  am
+                    pcix:  am  bw
+                  ibmpcx:  am
+                    ctrm:  am
+                  gs6300:  am
+                    h19k:
+               versaterm:  am
+                   xtalk:  am
+                 simterm:  am
+              diablo1620:
+           diablo1620-m8:
+              diablo1640:
+           diablo1640-lm:
+           diablo1740-lm:
+                  dtc382:  am
+                 dtc300s:
+                     gsi:
+                   aj830:
+                   aj510:  am
+                 nec5520:
+                   qume5:
+               xerox1720:
+                 cad68-3:  am
+                 cad68-2:  am
+                  cops10:  am  bw
+                    d132:
+                    d800:  am
+                 digilog:
+                     dwk:  am
+                  env230:  am
+                    ep48:  am
+                    ep40:  am
+                    ifmr:  am
+                opus3n1+:  am  bw
+                 teletec:  am
+                   v3220:  am
+
+ Totals:
+
+    am: 1481/1833
+    bw:  397/1833
+

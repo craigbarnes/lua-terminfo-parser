@@ -2,14 +2,31 @@ LUA = lua
 GIT = git
 NCURSES-REPO = https://github.com/ThomasDickey/ncurses-snapshots.git
 
+EXAMPLE_OUTPUTS = $(addprefix examples/output/, $(addsuffix .txt, \
+    backspace-key-sends-bs \
+    backspace-key-sends-del \
+    backspace-key-values \
+    cap-names \
+    delete-key-sends-del \
+    has-auto-margins \
+    has-repeat-char \
+    longest-key-sequence \
+    longest-sequence \
+    needs-xon-or-padding \
+))
+
+update: update-terminfo example-outputs
+example-outputs: $(EXAMPLE_OUTPUTS)
+
 check:
 	$(LUA) test.lua
 
-update: terminfo.src
+$(EXAMPLE_OUTPUTS): examples/output/%.txt: examples/%.lua terminfo.src
+	$(LUA) '$<' > '$@'
 
-terminfo.src: FORCE | .tmp/ncurses-snapshots/
+update-terminfo: | .tmp/ncurses-snapshots/
 	$(GIT) -C $| pull origin master:master
-	cp $|misc/terminfo.src $@
+	cp -p $|misc/terminfo.src terminfo.src
 
 .tmp/ncurses-snapshots/: | .tmp/
 	test -d $@ || $(GIT) clone $(NCURSES-REPO) $@
@@ -18,4 +35,4 @@ terminfo.src: FORCE | .tmp/ncurses-snapshots/
 	mkdir -p $@
 
 
-.PHONY: check update FORCE
+.PHONY: update update-terminfo example-outputs check

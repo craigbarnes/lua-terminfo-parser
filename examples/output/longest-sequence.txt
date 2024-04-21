@@ -1,0 +1,8 @@
+  88  rmkx
+  85  smkx
+  78  smcup
+  58  op
+  33  rmcup
+  27  sgr0
+  24  cnorm
+  13  civis

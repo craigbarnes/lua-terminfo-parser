@@ -1,0 +1,691 @@
+     ansi-mr  xon=true
+   ansi-mini  xon=true
+  ansi-mtabs  xon=true
+ansi-generic  xon=true
+ansi.sys-old  xon=true
+    ansi.sys  xon=true
+   ansi.sysk  xon=true
+   nansi.sys  xon=true
+  nansi.sysk  xon=true
+       tw100  xon=true
+     uniterm  xon=true
+      beterm  xon=true
+ linux-basic  xon=true
+     linux-m  xon=true
+  linux-c-nc  xon=true
+     linux-c  xon=true
+    linux2.2  xon=true
+    linux2.6  xon=true
+    linux3.0  xon=true
+       linux  xon=true
+ linux2.6.26  xon=true
+   linux-nic  xon=true
+  linux-koi8  xon=true
+ linux-koi8r  xon=true
+   linux-lat  xon=true
+    linux-vt  xon=true
+         kon  xon=true
+     jfbterm  xon=true
+      fbterm  xon=true
+linux-16color  xon=true
+        hurd  xon=true
+     qansi-g  xon=true
+       qansi  xon=true
+     qansi-t  xon=true
+     qansi-m  xon=true
+     qansi-w  xon=true
+ scoansi-old  xon=true
+ scoansi-new  xon=true
+     scoansi  xon=true
+  pccon+base  xon=true nxon=true npc=true
+    pccon0-m  xon=true nxon=true npc=true
+      pccon0  xon=true nxon=true npc=true
+     pccon-m  xon=true nxon=true npc=true
+       pccon  xon=true nxon=true npc=true
+      arm100  xon=true
+    arm100-w  xon=true
+        x68k  xon=true
+      wsvt25  xon=true
+     wsvt25m  xon=true
+     netbsd6  xon=true
+     origpc3  xon=true
+    bsdos-pc  xon=true
+bsdos-pc-nobold  xon=true
+  bsdos-pc-m  xon=true
+         pc3  xon=true
+      ibmpc3  xon=true
+   bsdos-ppc  xon=true
+       vt100  xon=true
+    vt100nam  xon=true
+    vt100-vb  xon=true
+     vt100-w  xon=true
+ vt100-w-nam  xon=true
+   vt100-nav  xon=true
+ vt100-nav-w  xon=true
+     vt100-s  xon=true
+ vt100-s-bot  xon=true
+       vt102  xon=true
+     vt102-w  xon=true
+  vt102-nsgr  xon=true
+       vt125  xon=true
+       vt132  xon=true
+   vt220-old  xon=true
+  vt220-base  xon=true
+       vt220  xon=true
+     vt220-w  xon=true
+  vt220-8bit  xon=true
+      vt220d  xon=true
+   vt220-nam  xon=true
+    vt320nam  xon=true
+       vt340  xon=true
+       vt400  xon=true
+       vt420  xon=true
+     vt420pc  xon=true
+  vt420pcdos  xon=true
+      vt420f  xon=true
+       vt510  xon=true
+     vt510pc  xon=true
+  vt510pcdos  xon=true
+       vt520  xon=true
+       vt525  xon=true
+   vt520ansi  xon=true
+   dec-vt100  xon=true
+   dec-vt220  xon=true
+    nsterm+7  xon=true
+  nsterm+acs  xon=true
+  nsterm+mac  xon=true
+  nsterm-m-7  xon=true
+nsterm-m-s-7  xon=true
+    nsterm-7  xon=true
+  nsterm-7-c  xon=true
+  nsterm-s-7  xon=true
+nsterm-c-s-7  xon=true
+nsterm-m-acs  xon=true
+nsterm-m-s-acs  xon=true
+  nsterm-acs  xon=true
+nsterm-c-acs  xon=true
+nsterm-s-acs  xon=true
+nsterm-c-s-acs  xon=true
+    nsterm-m  xon=true
+  nsterm-m-s  xon=true
+  nsterm-old  xon=true
+    nsterm-c  xon=true
+    nsterm-s  xon=true
+  nsterm-c-s  xon=true
+nsterm-16color  xon=true npc=true
+  nsterm-bce  xon=true npc=true
+nsterm-build309  xon=true npc=true
+nsterm-build326  xon=true npc=true
+nsterm-build343  xon=true npc=true
+nsterm-build361  xon=true npc=true
+nsterm-build400  xon=true npc=true
+nsterm-build440  xon=true npc=true
+      nsterm  xon=true npc=true
+   iTerm.app  xon=true npc=true
+  iTerm2.app  xon=true npc=true
+         crt  xon=true
+       putty  xon=true
+ vt100-putty  xon=true
+putty-256color  xon=true
+ putty-noapp  xon=true
+ putty-vt100  xon=true
+   putty-sco  xon=true
+ teraterm2.3  xon=true
+teraterm4.59  xon=true
+teraterm4.97  xon=true
+teraterm-256color  xon=true
+    teraterm  xon=true
+    ms-vt100  xon=true
+ms-vt100-color  xon=true
+   ms-vt100+  xon=true
+  ms-vt-utf8  xon=true
+ms-vt100-16color  xon=true
+     x10term  xon=true
+iterm2-direct  xon=true npc=true
+nsterm-direct  xon=true npc=true
+  rxvt-basic  xon=true
+        rxvt  xon=true
+rxvt-256color  xon=true
+rxvt-88color  xon=true
+    rxvt-xpm  xon=true
+ rxvt-cygwin  xon=true
+rxvt-cygwin-native  xon=true
+rxvt-16color  xon=true
+       mrxvt  xon=true
+mrxvt-256color  xon=true
+       Eterm  xon=true
+Eterm-256color  xon=true
+Eterm-88color  xon=true
+       aterm  xon=true
+      hpterm  xon=true pb=9600
+hpterm-color  xon=true pb=9600
+         emu  xon=true
+     emu-220  xon=true
+      mvterm  xon=true
+     vwmterm  xon=true npc=true
+         mgr  xon=true
+     mgr-sun  xon=true
+   mgr-linux  xon=true
+  terminator  xon=true
+terminology-0.6.1  xon=true
+terminology-1.0.0  xon=true
+screen.putty-256color  xon=true
+screen.Eterm  xon=true
+screen.mrxvt  xon=true
+screen.putty  xon=true
+screen-bce.Eterm  xon=true
+screen-bce.mrxvt  xon=true
+      pccons  xon=true
+      nwp517  xon=true
+    nwp517-w  xon=true
+      dtterm  xon=true
+    emx-base  xon=true
+    ansi-emx  xon=true
+ansi-color-2-emx  xon=true
+ansi-color-3-emx  xon=true
+   cygwinB19  xon=true
+      cygwin  xon=true
+   cygwinDBG  xon=true
+       djgpp  xon=true
+        uwin  xon=true
+      altos4  xon=true
+   hp2621-ba  xon=true pb=19200
+      hp2621  xon=true pb=19200
+   hp2621-fl  xon=true pb=19200
+     hp2621p  xon=true pb=19200
+   hp2621p-a  xon=true pb=19200
+  hp2621-k45  xon=true pb=19200
+   hp2621-48  xon=true pb=19200
+   hp2621-nl  xon=true pb=19200
+   hp2621-nt  xon=true pb=19200
+      hp2624  xon=true pb=4800
+      hp2626  xon=true pb=19200
+    hp2626-s  xon=true pb=19200
+   hp2626-ns  xon=true pb=19200
+   hp2626-12  xon=true pb=19200
+hp2626-12x40  xon=true pb=19200
+  hp2626-x40  xon=true pb=19200
+ hp2626-12-s  xon=true pb=19200
+ hp2627a-rev  xon=true pb=19200
+     hp2627a  xon=true pb=19200
+     hp2627c  xon=true pb=19200
+       hp150  xon=true pb=19200
+     hp2382a  xon=true pb=4800
+    hp2621-a  xon=true pb=19200
+       newhp  xon=true pb=4800
+       memhp  xon=true pb=4800
+       scrhp  xon=true pb=4800
+     hp2621b  xon=true pb=19200
+   hp2621b-p  xon=true pb=19200
+  hp2621b-kx  xon=true pb=19200
+hp2621b-kx-p  xon=true pb=19200
+      hp2622  xon=true pb=19200
+      hp2623  xon=true pb=19200
+   hp2624b-p  xon=true pb=4800
+  hp2624-10p  xon=true pb=4800
+hp2624b-10p-p  xon=true pb=4800
+     hp2397a  xon=true pb=4800
+      hpansi  xon=true
+      hp2392  xon=true
+       hpsub  xon=true
+        hpex  xon=true
+      qvt103  xon=true
+    qvt103-w  xon=true
+      qvt203  xon=true
+    qvt203-w  xon=true
+   qvt203-25  xon=true
+ qvt203-25-w  xon=true
+      tvi803  xon=true
+      tvi924  xon=true
+      tvi950  xon=true
+   tvi950-2p  xon=true
+   tvi950-4p  xon=true
+   tvi950-rv  xon=true
+tvi950-rv-2p  xon=true
+tvi950-rv-4p  xon=true
+      tvi955  xon=true
+    tvi955-w  xon=true
+   tvi955-hb  xon=true
+     tvi9065  xon=true
+        wy30  xon=true
+     wy30-mc  xon=true
+     wy30-vb  xon=true
+        wy50  xon=true
+     wy50-mc  xon=true
+     wy50-vb  xon=true
+      wy50-w  xon=true
+    wy50-wvb  xon=true
+       wy350  xon=true
+    wy350-vb  xon=true
+     wy350-w  xon=true
+   wy350-wvb  xon=true
+       wy120  xon=true pb=9601
+     wy120-w  xon=true pb=9601
+    wy120-25  xon=true pb=9601
+  wy120-25-w  xon=true pb=9601
+    wy120-vb  xon=true pb=9601
+  wy120-w-vb  xon=true pb=9601
+       wy99f  xon=true
+      wy99fa  xon=true
+        wy75  xon=true pb=1201
+     wy75-mc  xon=true pb=1201
+     wy75-vb  xon=true
+      wy75-w  xon=true pb=1201
+    wy75-wvb  xon=true
+        wy85  xon=true
+     wy85-vb  xon=true
+      wy85-w  xon=true
+    wy85-wvb  xon=true
+   wy85-8bit  xon=true
+       wy185  xon=true
+    wy185-24  xon=true
+    wy185-vb  xon=true
+     wy185-w  xon=true
+   wy185-wvb  xon=true
+    wy370-nk  xon=true
+       wy370  xon=true
+  wy370-105k  xon=true
+   wy370-EPC  xon=true
+    wy370-vb  xon=true
+     wy370-w  xon=true
+   wy370-wvb  xon=true
+    wy370-rv  xon=true
+       wy520  xon=true
+    wy520-24  xon=true
+    wy520-vb  xon=true
+     wy520-w  xon=true
+   wy520-wvb  xon=true
+   wy520-epc  xon=true
+wy520-epc-24  xon=true
+wy520-epc-vb  xon=true
+ wy520-epc-w  xon=true
+wy520-epc-wvb  xon=true
+    wy520-36  xon=true
+    wy520-48  xon=true
+   wy520-36w  xon=true
+   wy520-48w  xon=true
+  wy520-36pc  xon=true
+  wy520-48pc  xon=true
+ wy520-36wpc  xon=true
+ wy520-48wpc  xon=true
+      wy75ap  xon=true pb=1201
+  vt320-k311  xon=true
+     att2300  xon=true
+     att2350  xon=true
+   att5410v1  xon=true
+ att4410v1-w  xon=true
+     att4410  xon=true
+   att5410-w  xon=true
+       v5410  xon=true
+     att4415  xon=true
+   att4415-w  xon=true
+  att4415-rv  xon=true
+att4415-w-rv  xon=true
+  att4415-nl  xon=true
+att4415-rv-nl  xon=true
+att4415-w-nl  xon=true
+att4415-w-rv-n  xon=true
+   att5420_2  xon=true
+ att5420_2-w  xon=true
+     att4418  xon=true
+   att4418-w  xon=true
+     att4420  xon=true
+     att4424  xon=true
+   att4424-1  xon=true
+     att5425  xon=true
+  att5425-nl  xon=true
+   att5425-w  xon=true
+     att4426  xon=true
+     att510a  xon=true
+     att510d  xon=true
+      att500  xon=true
+   att5620-1  xon=true
+     att5620  xon=true npc=true
+  att5620-24  xon=true npc=true
+  att5620-34  xon=true npc=true
+      att605  xon=true
+   att605-pc  xon=true
+    att605-w  xon=true
+      att610  xon=true
+    att610-w  xon=true
+ att610-103k  xon=true
+att610-103k-w  xon=true
+      att615  xon=true
+    att615-w  xon=true
+ att615-103k  xon=true
+att615-103k-w  xon=true
+      att620  xon=true
+    att620-w  xon=true
+ att620-103k  xon=true
+att620-103k-w  xon=true
+      att630  xon=true npc=true
+   att630-24  xon=true npc=true
+      att700  xon=true
+      att730  xon=true npc=true
+   att730-41  xon=true npc=true
+   att730-24  xon=true npc=true
+     att730r  xon=true npc=true
+  att730r-41  xon=true npc=true
+  att730r-24  xon=true npc=true
+      att505  xon=true
+   att505-24  xon=true
+   att505-22  xon=true
+     aaa+unk  xon=true
+      aaa-18  xon=true
+   aaa-18-rv  xon=true
+      aaa-20  xon=true
+      aaa-22  xon=true
+      aaa-24  xon=true
+   aaa-24-rv  xon=true
+      aaa-26  xon=true
+      aaa-28  xon=true
+    aaa-30-s  xon=true
+ aaa-30-s-rv  xon=true
+  aaa-s-ctxt  xon=true
+aaa-s-rv-ctxt  xon=true
+         aaa  xon=true
+   aaa-30-rv  xon=true
+ aaa-30-ctxt  xon=true
+aaa-30-rv-ctxt  xon=true
+      aaa-36  xon=true
+   aaa-36-rv  xon=true
+      aaa-40  xon=true
+   aaa-40-rv  xon=true
+      aaa-48  xon=true
+   aaa-48-rv  xon=true
+    aaa-60-s  xon=true
+ aaa-60-s-rv  xon=true
+aaa-60-dec-rv  xon=true
+      aaa-60  xon=true
+   aaa-60-rv  xon=true
+      aaa-db  xon=true
+        guru  xon=true
+     guru-rv  xon=true
+  guru-nctxt  xon=true
+      guru-s  xon=true
+     guru-24  xon=true
+     guru-44  xon=true
+   guru-44-s  xon=true
+     guru-76  xon=true
+   guru-76-s  xon=true
+  guru-76-lp  xon=true
+   guru-76-w  xon=true
+ guru-76-w-s  xon=true
+  guru-76-wm  xon=true
+  cit101e-rv  xon=true
+      cit500  xon=true
+  cdc721-esc  xon=true
+        c108  xon=true
+     c108-4p  xon=true
+     c108-rv  xon=true
+  c108-rv-4p  xon=true
+      c108-w  xon=true
+      hds200  xon=true
+      avt-ns  xon=true
+   avt-rv-ns  xon=true
+    avt-w-ns  xon=true
+ avt-w-rv-ns  xon=true
+         avt  xon=true
+      avt-rv  xon=true
+       avt-w  xon=true
+    avt-w-rv  xon=true
+   contel300  xon=true
+   contel301  xon=true
+  dg-generic  xon=true
+        d210  xon=true
+     d210-dg  xon=true
+        d211  xon=true
+     d211-7b  xon=true
+     d211-dg  xon=true
+     d216-dg  xon=true
+   d216-unix  xon=true
+d216-unix-25  xon=true
+   d217-unix  xon=true
+d217-unix-25  xon=true
+        d220  xon=true
+     d220-7b  xon=true
+     d220-dg  xon=true
+       d230c  xon=true
+    d230c-dg  xon=true
+        d400  xon=true
+        d410  xon=true
+     d410-7b  xon=true
+     d410-dg  xon=true
+      d410-w  xon=true
+   d410-7b-w  xon=true
+     d412-dg  xon=true
+   d412-unix  xon=true
+ d412-unix-w  xon=true
+d412-unix-25  xon=true
+ d412-unix-s  xon=true
+d412-unix-sr  xon=true
+   d413-unix  xon=true
+ d413-unix-w  xon=true
+d413-unix-25  xon=true
+ d413-unix-s  xon=true
+d413-unix-sr  xon=true
+   d414-unix  xon=true
+ d414-unix-w  xon=true
+d414-unix-25  xon=true
+ d414-unix-s  xon=true
+d414-unix-sr  xon=true
+    d430c-dg  xon=true
+d430c-dg-ccc  xon=true
+  d430c-unix  xon=true
+d430c-unix-w  xon=true
+d430c-unix-25  xon=true
+d430c-unix-s  xon=true
+d430c-unix-sr  xon=true
+d430c-unix-ccc  xon=true
+d430c-unix-w-ccc  xon=true
+d430c-unix-25-ccc  xon=true
+d430c-unix-s-ccc  xon=true
+d430c-unix-sr-ccc  xon=true
+       d470c  xon=true
+    d470c-7b  xon=true
+    d470c-dg  xon=true
+        d555  xon=true
+     d555-7b  xon=true
+      d555-w  xon=true
+   d555-7b-w  xon=true
+     d555-dg  xon=true
+        d577  xon=true
+     d577-7b  xon=true
+      d577-w  xon=true
+   d577-7b-w  xon=true
+     d577-dg  xon=true
+        d578  xon=true
+     d578-7b  xon=true
+       ts100  xon=true
+  ts100-ctxt  xon=true
+        f100  xon=true
+     f100-rv  xon=true
+        f110  xon=true
+     f110-14  xon=true
+      f110-w  xon=true
+    f110-14w  xon=true
+        f200  xon=true
+      f200-w  xon=true
+      f200vi  xon=true
+    f200vi-w  xon=true
+     ibm3101  xon=true
+     ibm3151  xon=true
+     ibm3161  xon=true
+   ibm3161-C  xon=true
+     ibm3162  xon=true
+     ibm3164  xon=true
+     ibm5151  xon=true
+     ibmmono  xon=true
+      ibmega  xon=true
+     ibm5154  xon=true
+    ibmega-c  xon=true
+    ibmvga-c  xon=true
+      ibmvga  xon=true
+        rtpc  xon=true
+     ibm6155  xon=true
+    ibmapa8c  xon=true
+  ibmapa8c-c  xon=true
+     ibm6154  xon=true
+     ibm6153  xon=true
+  ibm6153-90  xon=true
+  ibm6153-40  xon=true
+     ibm8512  xon=true
+       hft-c  xon=true
+   hft-c-old  xon=true
+     hft-old  xon=true
+         lft  xon=true
+     ibm5081  xon=true
+   ibm5081-c  xon=true
+     ibm8503  xon=true
+     ibm8514  xon=true
+   ibm8514-c  xon=true
+     aixterm  xon=true
+   aixterm-m  xon=true
+aixterm-m-old  xon=true
+    jaixterm  xon=true
+  jaixterm-m  xon=true
+aixterm-16color  xon=true
+      prism9  xon=true
+    prism9-w  xon=true
+     prism12  xon=true
+   prism12-w  xon=true
+     prism14  xon=true
+   prism14-w  xon=true
+   mt4520-rv  xon=true
+ ncr260intan  xon=true
+ncr260intwan  xon=true
+ ncr260intpp  xon=true
+ncr260intwpp  xon=true
+  ncr260vppp  xon=true
+ ncr260vpwpp  xon=true
+ncr260vt100an  xon=true
+ncr260vt100wan  xon=true
+ncr260vt100pp  xon=true
+ncr260vt100wpp  xon=true
+ncr260vt200an  xon=true
+ncr260vt200wan  xon=true
+ncr260vt200pp  xon=true
+ncr260vt200wpp  xon=true
+ncr260vt300an  xon=true
+ncr260vt300wan  xon=true
+ncr260vt300pp  xon=true
+ncr260vt300wpp  xon=true
+ncr260wy325pp  xon=true
+ncr260wy325wpp  xon=true
+ncr260wy350pp  xon=true
+ncr260wy350wpp  xon=true
+ncr260wy50+pp  xon=true
+ncr260wy50+wpp  xon=true
+ncr260wy60pp  xon=true
+ncr260wy60wpp  xon=true
+  ncr160vppp  xon=true
+ ncr160vpwpp  xon=true
+ncr160vt100an  xon=true
+ncr160vt100pp  xon=true
+ncr160vt100wan  xon=true
+ncr160vt100wpp  xon=true
+ncr160vt200an  xon=true
+ncr160vt200pp  xon=true
+ncr160vt200wan  xon=true
+ncr160vt200wpp  xon=true
+ncr160vt300an  xon=true
+ncr160vt300pp  xon=true
+ncr160vt300wan  xon=true
+ncr160vt300wpp  xon=true
+ncr160wy50+pp  xon=true
+ncr160wy50+wpp  xon=true
+ncr160wy60pp  xon=true
+ncr160wy60wpp  xon=true
+  ncrvt100an  xon=true
+ ncrvt100wan  xon=true
+     ndr9500  xon=true
+  ndr9500-nl  xon=true
+  ndr9500-25  xon=true
+ndr9500-25-nl  xon=true
+  ndr9500-mc  xon=true
+ndr9500-25-mc  xon=true
+ndr9500-mc-nl  xon=true
+ndr9500-25-mc-nl  xon=true
+       dt100  xon=true
+      dt100w  xon=true
+       dt110  xon=true
+    tek4025a  xon=true
+  tek4105-30  xon=true
+    tek4105a  xon=true
+  tek4106brl  xon=true
+     tek4115  xon=true
+       tty33  xon=true
+       tty37  xon=true
+       tty40  xon=true
+       tty43  xon=true
+    apple-ae  xon=true nxon=true
+    lisaterm  xon=true
+  lisaterm-w  xon=true
+   minix-old  xon=true
+minix-old-am  xon=true
+        luna  xon=true
+     linux-s  xon=true
+putty-screen  xon=true
+        blit  xon=true
+      cbblit  xon=true
+       oblit  xon=true
+ tws-generic  xon=true
+ tws2102-sna  xon=true
+     tws2103  xon=true
+ tws2103-sna  xon=true
+ dku7102-old  xon=true
+     dku7202  xon=true
+       bq300  xon=true
+    bq300-rv  xon=true
+     bq300-w  xon=true
+  bq300-w-rv  xon=true
+     bq300-8  xon=true
+   bq300-8rv  xon=true
+    bq300-8w  xon=true
+ bq300-w-8rv  xon=true
+    bq300-pc  xon=true
+ bq300-pc-rv  xon=true
+  bq300-pc-w  xon=true
+bq300-pc-w-rv  xon=true
+  bq300-8-pc  xon=true
+bq300-8-pc-rv  xon=true
+bq300-8-pc-w  xon=true
+bq300-8-pc-w-rv  xon=true
+         vip  xon=true
+       vip-w  xon=true
+       vip-H  xon=true
+      vip-Hw  xon=true
+       z39-a  xon=true
+    ims950-b  xon=true
+      ims950  xon=true
+   ims950-rv  xon=true
+        mt70  xon=true
+      rt6221  xon=true
+    rt6221-w  xon=true
+    hirez100  xon=true
+  hirez100-w  xon=true
+       ti916  xon=true
+     ti916-8  xon=true
+   ti916-132  xon=true
+ ti916-8-132  xon=true
+       ti924  xon=true
+     ti924-8  xon=true
+      ti924w  xon=true
+    ti924-8w  xon=true
+       ti931  xon=true
+       ti926  xon=true
+     ti926-8  xon=true
+     ti_ansi  xon=true
+       ti928  xon=true
+     ti928-8  xon=true
+apollo+vt132  xon=true
+  apollo_15P  xon=true
+  apollo_19L  xon=true
+apollo_color  xon=true
+     att6386  xon=true
+  pc6300plus  xon=true
+     att7300  xon=true
+        ctrm  xon=true pb=19200
+      gs6300  xon=true
+       xtalk  xon=true
+    opus3n1+  xon=true
