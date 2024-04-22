@@ -12,7 +12,6 @@ EXAMPLE_OUTPUTS = $(addprefix examples/output/, $(addsuffix .txt, \
     has-repeat-char \
     longest-key-sequence \
     longest-sequence \
-    needs-xon-or-padding \
 ))
 
 update: update-terminfo example-outputs
