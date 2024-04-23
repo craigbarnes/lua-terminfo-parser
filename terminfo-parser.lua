@@ -14,6 +14,9 @@ local C, Cc, Cs = lpeg.C, lpeg.Cc, lpeg.Cs
 local Cf, Cg, Ct = lpeg.Cf, lpeg.Cg, lpeg.Ct
 local _ENV = nil
 
+-- NOTE: Numerical backslash sequences in Lua strings (e.g. "\033") are
+-- decimal escapes; not octal as they would be in C or shell. This is
+-- notable both in this table and in the LPeg grammar further below.
 local unescape_char = {
     [":"] = ":",
     [","] = ",",
