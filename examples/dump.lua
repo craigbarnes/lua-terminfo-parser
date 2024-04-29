@@ -3,9 +3,10 @@ local escape = assert(terminfo.escape)
 local write = assert(io.write)
 local terms = assert(terminfo.parse_file("terminfo.src"))
 
-for _, caps, idx in terms:iter() do
+for tname1, caps, idx in terms:iter() do
     local tnames = assert(caps._TERM)
-    write(('[%u], ["%s"]'):format(idx, assert(tnames[1])))
+    assert(tnames[1] == tname1)
+    write(('[%u], ["%s"]'):format(idx, tname1))
     for i = 2, #tnames do
         write(', ["', tnames[i], '"]')
     end
