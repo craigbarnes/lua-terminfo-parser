@@ -170,7 +170,7 @@ function Entries:iter()
     local function iter(t)
         for i, entry in ipairs(t) do
             local term = assert(entry._TERM[1])
-            yield(term, entry)
+            yield(term, entry, i)
         end
     end
     return wrap(function() iter(self) end)
