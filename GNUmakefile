@@ -27,8 +27,5 @@ $(EXAMPLE_OUTPUTS): examples/output/%.txt: examples/%.lua terminfo.src
 update-terminfo:
 	$(FETCH) '$(TERMINFO_SRC_ORIG)'
 
-.tmp/:
-	mkdir -p $@
-
 
 .PHONY: update update-terminfo example-outputs check
