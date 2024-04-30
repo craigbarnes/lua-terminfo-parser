@@ -1,6 +1,7 @@
 LUA = lua
-GIT = git
-NCURSES-REPO = https://github.com/ThomasDickey/ncurses-snapshots.git
+FETCH = curl -sSL -o '$@'
+NCURSES_SNAPSHOTS = https://raw.githubusercontent.com/ThomasDickey/ncurses-snapshots
+TERMINFO_SRC_ORIG = $(NCURSES_SNAPSHOTS)/master/misc/terminfo.src
 
 EXAMPLE_OUTPUTS = $(addprefix examples/output/, $(addsuffix .txt, \
     backspace-key-sends-bs \
@@ -23,12 +24,8 @@ check:
 $(EXAMPLE_OUTPUTS): examples/output/%.txt: examples/%.lua terminfo.src
 	$(LUA) '$<' > '$@'
 
-update-terminfo: | .tmp/ncurses-snapshots/
-	$(GIT) -C $| pull origin master:master
-	cp -p $|misc/terminfo.src terminfo.src
-
-.tmp/ncurses-snapshots/: | .tmp/
-	test -d $@ || $(GIT) clone $(NCURSES-REPO) $@
+update-terminfo:
+	$(FETCH) '$(TERMINFO_SRC_ORIG)'
 
 .tmp/:
 	mkdir -p $@
