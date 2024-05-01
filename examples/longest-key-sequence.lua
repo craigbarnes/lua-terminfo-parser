@@ -1,4 +1,6 @@
 local terminfo = require "terminfo-parser"
+local escape = assert(terminfo.escape)
+local min, max, write = math.min, math.max, io.write
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local keys, n = {}, 0
 
@@ -26,8 +28,14 @@ table.sort(keys, function(a, b)
     return a.len > b.len
 end)
 
-for i = 1, math.min(n, 20) do
+local limit = min(n, 20)
+local termwidth = 0
+for i = 1, limit do
+    termwidth = max(#keys[i].term, termwidth)
+end
+
+for i = 1, limit do
     local t = assert(keys[i])
-    local seq = terminfo.escape(t.seq)
-    io.write(("%3u  %-6s %-18s %s\n"):format(t.len, t.cap, t.term, seq))
+    local tpl = "%3u  %-6s %-" .. min(60, termwidth) .. "s  %s\n"
+    write(tpl:format(t.len, t.cap, t.term, escape(t.seq)))
 end
