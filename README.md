@@ -12,6 +12,17 @@ C APIs. Many control sequences in the database *must* be passed through
 [`tparm(3)`] and/or [`tputs(3)`] before being sent to a terminal. Use
 Lua bindings for the C APIs if you need a terminal control library.
 
+Usage
+-----
+
+See the scripts in the [`examples/`] directory for a demonstration of
+how to use the library and the kinds of queries that can be performed.
+For quick reference, the output for most of these scripts can also be
+found under [`examples/output/`].
+
+Since the intended use case of the library is running ad-hoc queries on
+[`terminfo.src`], there are no official packages or versioned releases.
+
 Requirements
 ------------
 
@@ -42,4 +53,7 @@ Public License version 3 for more details.
 [`infocmp`]: https://invisible-island.net/ncurses/man/infocmp.1m.html
 [`tparm(3)`]: https://invisible-island.net/ncurses/man/curs_terminfo.3x.html#h3-Formatting-Output
 [`tputs(3)`]: https://invisible-island.net/ncurses/man/curs_terminfo.3x.html#h3-Output-Functions
+[`examples/`]: https://gitlab.com/craigbarnes/lua-terminfo-parser/-/tree/master/examples
+[`examples/output/`]: https://gitlab.com/craigbarnes/lua-terminfo-parser/-/tree/master/examples/output
+[`terminfo.src`]: https://gitlab.com/craigbarnes/lua-terminfo-parser/-/blob/master/terminfo.src
 [General Public License version 3]: https://www.gnu.org/licenses/gpl-3.0.txt
