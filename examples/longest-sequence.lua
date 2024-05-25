@@ -1,4 +1,5 @@
 local terminfo = require "terminfo-parser"
+local write = assert(io.write)
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local lengths = {}
 
@@ -23,5 +24,5 @@ table.sort(caps, function(a, b)
 end)
 
 for i, str in ipairs(caps) do
-    io.write(("%4u  %s\n"):format(lengths[str], str))
+    write(("%4u  %s\n"):format(lengths[str], str))
 end

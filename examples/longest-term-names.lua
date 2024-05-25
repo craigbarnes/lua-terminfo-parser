@@ -1,5 +1,4 @@
 local terminfo = require "terminfo-parser"
-local escape = assert(terminfo.escape)
 local write = assert(io.write)
 local terms = assert(terminfo.parse_file("terminfo.src"))
 

@@ -1,4 +1,6 @@
 local terminfo = require "terminfo-parser"
+local escape = assert(terminfo.escape)
+local write = assert(io.write)
 local terms = assert(terminfo.parse_file("terminfo.src"))
 local counts, index, n = {}, {}, 0
 local capname = arg[1]
@@ -33,5 +35,5 @@ end)
 
 for i = 1, n do
     local str = index[i]
-    io.write(("%5u  %s\n"):format(counts[str], terminfo.escape(str)))
+    write(("%5u  %s\n"):format(counts[str], escape(str)))
 end
