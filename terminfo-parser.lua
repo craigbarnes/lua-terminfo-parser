@@ -7,11 +7,13 @@ local lpeg = require "lpeg"
 local char, tonumber, open, assert = string.char, tonumber, io.open, assert
 local setmetatable, rawget = setmetatable, rawget
 local pairs, ipairs, next = pairs, ipairs, next
+local sort, concat = table.sort, table.concat
 local wrap, yield = coroutine.wrap, coroutine.yield
 local type, tostring = type, tostring
-local P, R, S = lpeg.P, lpeg.R, lpeg.S
+local P, R, S, V = lpeg.P, lpeg.R, lpeg.S, lpeg.V
 local C, Cc, Cs = lpeg.C, lpeg.Cc, lpeg.Cs
 local Cf, Cg, Ct = lpeg.Cf, lpeg.Cg, lpeg.Ct
+local Cmt, Carg = lpeg.Cmt, lpeg.Carg
 local _ENV = nil
 
 -- NOTE: Numerical backslash sequences in Lua strings (e.g. "\27") are
@@ -73,43 +75,130 @@ local function base8_tonumber(str)
     return tonumber(str, 8)
 end
 
-local terminfo
-do
-    local comment = P"#" * (P(1) - P"\n")^0 / 0;
-    local whitespace = S" \t\n";
-    local skip = (whitespace + comment)^0
+local function lineno(str, i)
+    if i == 1 then
+        return 1, 1
+    end
+    local rest, n = str:sub(1, i):gsub("[^\n]*\n", "")
+    return n + 1, #rest
+end
 
-    local backslash = P"\\" / "" * (
+local function tokenset_to_list(set)
+    local list, i = {}, 0
+    for s in pairs(set) do
+        i = i + 1
+        if s:match("^%p$") then
+            -- Quote punctuation characters
+            s = (s == "'") and '"\'"' or ("'" .. s .. "'")
+        end
+        list[i] = s
+    end
+    sort(list)
+    return list
+end
+
+local char_to_printable = setmetatable ({
+    ["\\"] = "\\\\",
+    ["\a"] = "\\a",
+    ["\b"] = "\\b",
+    ["\t"] = "\\t",
+    ["\n"] = "\\n",
+    ["\r"] = "\\r",
+    [0x7F] = "\\x7F",
+}, {
+    __index = function(t, ch)
+        local byte = ch:byte()
+        return (byte >= 32) and ch or ("\\x%02X"):format(byte)
+    end
+})
+
+-- Get farthest failure position
+local function getffp(subject, position, errorinfo)
+    return errorinfo.ffp or position, errorinfo
+end
+
+local function report_error()
+    local errorinfo = Cmt(Carg(1), getffp) * V"OneWord" / function(e, u)
+        e.unexpected = u
+        return e
+    end
+    return errorinfo / function(e)
+        local filename = e.filename or ""
+        local line, col = lineno(e.subject, e.ffp or 1)
+        local unexpected = e.unexpected:gsub(".", char_to_printable)
+        local expected = concat(tokenset_to_list(e.expected), ", ")
+        local s = "%s:%d:%d: Syntax error: unexpected '%s', expecting %s"
+        return nil, s:format(filename, line, col, unexpected, expected)
+    end
+end
+
+local function setffp(subject, position, errorinfo, token_name)
+    local ffp = errorinfo.ffp
+    if not ffp or position > ffp then
+        -- TODO: Instead of creating a new table each time the ffp advances,
+        -- store token names in array indices (reusing a single table) and
+        -- simply reset a length field here
+        errorinfo.ffp = position
+        errorinfo.expected = {[token_name] = true}
+    elseif position == ffp then
+        errorinfo.expected[token_name] = true
+    end
+    return false
+end
+
+local function updateffp(name)
+    return Cmt(Carg(1) * Cc(name), setffp)
+end
+
+local function T(name)
+    return V(name) + updateffp(name) * P(false)
+end
+
+local function symb(str)
+    return P(str) + updateffp(str) * P(false)
+end
+
+local terminfo = P {
+    V"Entries" * T"EOF" + report_error();
+
+    Comment = P"#" * (P(1) - P"\n")^0 / 0;
+    Space = S" \t\n";
+    Skip = (V"Space" + V"Comment")^0;
+
+    BackSlash = P"\\" / "" * (
         R"03" * R"09"^-2 / unescape_octal
         + S"Eenlrtbfs0^,:\\" / unescape_char
-    )
+    );
 
-    local caret = (P"^" / "" * (R("@_") / unescape_caret)) + (P"^?" / "\127")
-    local escape = caret + backslash
-    local stringchar = (R"\033\126" - S",\\") + (S" \t\n" / "")
-    local string = Cs((escape + stringchar)^0)
+    Caret = (P"^" / "" * (R("@_") / unescape_caret)) + (P"^?" / "\127");
+    Escape = V"Caret" + V"BackSlash";
+    StringChar = (R"\033\126" - S",\\") + (S" \t\n" / "");
+    String = Cs((V"Escape" + V"StringChar")^0);
 
-    local oct = P"0" * R"07"^0 / base8_tonumber
-    local dec = R"19" * R"09"^0 / tonumber
-    local hex = P"0x" * R("09", "AF", "af")^1 / tonumber
-    local number = hex + oct + dec
+    Oct = P"0" * R"07"^0 / base8_tonumber;
+    Dec = R"19" * R"09"^0 / tonumber;
+    Hex = P"0x" * R("09", "AF", "af")^1 / tonumber;
+    Number = V"Hex" + V"Oct" + V"Dec";
 
-    local capname = C(R("az", "AZ", "09", "..", "__")^1)
-    local boolcap = Cg(capname * Cc(true))
-    local numcap = Cg(capname * P"#" * number)
-    local strcap = Cg(capname * P"=" * string)
-    local cancelled = Cg(capname * P"@" * Cc(false))
-    local capspace = P"\n"^0 * S" \t"^1
-    local cap = capspace * (strcap + numcap + cancelled + boolcap) * P","
+    CapName = C(R("az", "AZ", "09", "..", "__")^1);
+    BoolCap = Cg(T"CapName" * Cc(true));
+    NumCap = Cg(T"CapName" * symb"#" * T"Number");
+    StrCap = Cg(T"CapName" * symb"=" * T"String");
+    Cancelled = Cg(T"CapName" * symb"@" * Cc(false));
+    CapSpace = P"\n"^0 * S" \t"^1;
+    Cap = V"CapSpace" * (V"StrCap" + V"NumCap" + V"Cancelled" + V"BoolCap") * symb",";
 
-    local entrychar = R"\032\126" - S","
-    local entryname = Cg(Cc"_DESC" * C(entrychar^1)) * P",\n"
-    local caps = Cf(Ct"" * entryname * cap^1, setfield)
-    local entry = skip * caps * skip
-    local eof = P(-1)
+    EntryChar = R"\032\126" - S",";
+    EntryEnd = P",\n";
+    EntryName = Cg(Cc"_DESC" * C(V"EntryChar"^1)) * T"EntryEnd";
+    Caps = Cf(Ct"" * T"EntryName" * T"Cap"^1, setfield);
+    Entry = V"Skip" * V"Caps" * V"Skip";
+    Entries = Ct(V"Entry"^1);
+    EOF = P(-1);
 
-    terminfo = Ct(entry^1) * eof
-end
+    -- Used by report_error() to extract the "unexpected" string
+    OneWord = C(P(1)) + Cc(V"EOF");
+}
 
 local function is_non_enumerated_field(name)
     local prefixes = {
@@ -176,10 +265,11 @@ function Entries:iter()
     return wrap(function() iter(self) end)
 end
 
-local function parse(input)
-    local entries = terminfo:match(input)
+local function parse(input, filename)
+    local errorinfo = {subject = input, filename = filename}
+    local entries, err = terminfo:match(input, 1, errorinfo)
     if not entries then
-        return nil, "Parsing failed"
+        return nil, err
     end
     for i = 1, #entries do
         local entry = assert(entries[i])
@@ -217,7 +307,7 @@ local function parse_file(filename)
     if not text then
         return nil, read_err
     end
-    return parse(text)
+    return parse(text, filename)
 end
 
 local escmap = setmetatable ({

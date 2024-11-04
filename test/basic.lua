@@ -1,6 +1,6 @@
 local terminfo = assert(loadfile("./terminfo-parser.lua", "t"))()
 local parse_file = assert(terminfo.parse_file)
-local assert, type, stderr = assert, type, io.stderr
+local assert, type = assert, type
 local pairs, rawget = pairs, rawget
 local _ENV = nil
 
@@ -106,5 +106,3 @@ do
     end
     assert(seen.kRIT)
 end
-
-stderr:write("OK\n")

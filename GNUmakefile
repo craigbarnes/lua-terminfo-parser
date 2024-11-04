@@ -20,7 +20,8 @@ update: update-terminfo example-outputs
 example-outputs: $(EXAMPLE_OUTPUTS)
 
 check:
-	$(LUA) test.lua
+	$(LUA) test/basic.lua
+	$(LUA) test/errors.lua
 
 $(EXAMPLE_OUTPUTS): examples/output/%.txt: examples/%.lua terminfo.src
 	$(LUA) '$<' > '$@'
