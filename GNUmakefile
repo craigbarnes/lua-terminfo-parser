@@ -29,4 +29,5 @@ update-terminfo:
 	$(CURL) -O '$(TERMINFO_SRC_ORIG)'
 
 
+.DEFAULT_GOAL = check
 .PHONY: update update-terminfo example-outputs check
