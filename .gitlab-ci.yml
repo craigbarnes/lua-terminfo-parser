@@ -4,4 +4,4 @@ test:
         - make check LUA=lua5.4
         - make check LUA=lua5.3
         - make check LUA=lua5.2
-        - make check LUA=lua5.2
+        - make check LUA=lua5.1
