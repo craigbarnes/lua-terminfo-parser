@@ -1,5 +1,6 @@
-LUA = lua
-CURL = curl -sSL
+LUA ?= lua
+CURL ?= curl
+CURLFLAGS ?= -sSL
 NCURSES_SNAPSHOTS = https://raw.githubusercontent.com/ThomasDickey/ncurses-snapshots
 TERMINFO_SRC_ORIG = $(NCURSES_SNAPSHOTS)/master/misc/terminfo.src
 
@@ -27,7 +28,7 @@ $(EXAMPLE_OUTPUTS): examples/output/%.txt: examples/%.lua terminfo.src
 	$(LUA) '$<' > '$@'
 
 update-terminfo:
-	$(CURL) -O '$(TERMINFO_SRC_ORIG)'
+	$(CURL) $(CURLFLAGS) -O '$(TERMINFO_SRC_ORIG)'
 
 
 .DEFAULT_GOAL = check
