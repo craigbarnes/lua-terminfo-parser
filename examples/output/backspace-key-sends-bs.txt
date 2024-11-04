@@ -165,6 +165,8 @@ ms-vt-utf8
 ms-vt100-16color
 winconsole
 ms-terminal
+ms-terminal-direct
+ms+terminal
 vscode
 vscode-direct
 x10term
@@ -285,7 +287,6 @@ alacritty+common
 rio
 rio-direct
 domterm
-wezterm
 screen.xterm-256color
 screen.konsole-256color
 screen.vte-256color

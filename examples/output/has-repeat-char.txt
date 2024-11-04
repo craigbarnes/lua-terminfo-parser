@@ -24,6 +24,8 @@
      mintty-direct:  %p1%c\E[%p2%{1}%-%db
      mintty+common:  %p1%c\E[%p2%{1}%-%db
        ms-terminal:  %p1%c\E[%p2%{1}%-%db
+ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
+       ms+terminal:  %p1%c\E[%p2%{1}%-%db
      xterm+nofkeys:  %p1%c\E[%p2%{1}%-%db
         xterm-p370:  %p1%c\E[%p2%{1}%-%db
         xterm-p371:  %p1%c\E[%p2%{1}%-%db

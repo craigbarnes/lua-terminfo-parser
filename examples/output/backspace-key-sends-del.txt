@@ -135,6 +135,7 @@ kitty+common
 foot
 foot-direct
 foot+base
+wezterm
 contour
 contour-direct
 eterm-color

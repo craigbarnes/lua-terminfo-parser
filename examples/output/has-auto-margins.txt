@@ -366,6 +366,8 @@
         ms-vt100-16color:  am
               winconsole:  am
              ms-terminal:  am
+      ms-terminal-direct:  am
+             ms+terminal:  am
                   vscode:  am
            vscode-direct:  am
                  x10term:  am
@@ -1834,6 +1836,6 @@
 
  Totals:
 
-    am: 1481/1833
-    bw:  397/1833
+    am: 1483/1835
+    bw:  397/1835
 

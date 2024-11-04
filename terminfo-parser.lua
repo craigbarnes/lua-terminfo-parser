@@ -94,7 +94,7 @@ do
     local hex = P"0x" * R("09", "AF", "af")^1 / tonumber
     local number = hex + oct + dec
 
-    local capname = C(R("az", "AZ", "09", "..")^1)
+    local capname = C(R("az", "AZ", "09", "..", "__")^1)
     local boolcap = Cg(capname * Cc(true))
     local numcap = Cg(capname * P"#" * number)
     local strcap = Cg(capname * P"=" * string)

@@ -6,8 +6,8 @@
 # Report bugs and new terminal descriptions to
 #	bug-ncurses@gnu.org
 #
-#	$Revision: 1.1144 $
-#	$Date: 2024/05/25 19:34:27 $
+#	$Revision: 1.1157 $
+#	$Date: 2024/11/02 20:48:46 $
 #
 # The original header is preserved below for reference.  It is noted that there
 # is a "newer" version which differs in some cosmetic details (but actually
@@ -3683,7 +3683,8 @@ iTerm.app|iterm|iTerm.app terminal emulator for Mac OS X,
 # features.
 #
 # iTerm2 3.5.0 comes with a 4-year-old copy of xterm's terminfo (June 2020),
-# which is modified:
+# which is modified, using the ncurses TERMINFO_DIRS variable to substitute
+# this locally:
 # + xterm-nrc and xterm+pcfN are removed
 # + the developer made changes to adapt it to the 16-year-old version of
 #   ncurses bundled with MacOS, i.e., changing the mouse protocol to the
@@ -4633,11 +4634,45 @@ winconsole|Windows 10 new console,
 	use=ansi+local, use=ecma+sgr, use=ecma+color,
 	use=vt220+cvis, use=vt220+pcedit, use=xterm+nopcfkeys,
 
-# Windows Terminal (Preview)
+# Windows Terminal
 # https://github.com/microsoft/terminal
+#
+# Version 1.21.2911.0
+# 2024-10-17
+#
+# - The "About" dialog has a pointer to the release notes, but that turns out
+#   to be for all branches.  This particular version (unlike those previously
+#   tested) happens to be a non-preview version.
+# - Windows Terminal #2958 has relevant discussion.
+#
+# tack:
+# - keypad escapes still do not work
+# - meta mode does not work
+# - when running tests, the screen maximized and did not resume normal size
+#
+# vttest:
+# - identifies as a VT100-level terminal supporting Greek and Turkish (not
+#   applicable to a VT100), horizontal scrolling () and DRCS (seems to work)
+# - left/right margins work
+# - DECSCUSR is okay except for mode 1
+# - SL/SR fail
+# - does not support XTVERSION
+# - some mouse controls work, but not highlight tracking and X10 compatibility
+# - mouse focus events appear - but not in the test-screen (like VTE).
+# - cursor position after alternate screen is correct for 1049, not otherwise
+# - window reporting does not work
+#
+# wraptest:
+# - DECRC does not restore wrap
+#
+# other:
+# - change history says it supports bracketed paste
+# - Greek and Turkish character sets work with GL, not GR
+# - source code says it implements OSC 52, as well as 12, 112, but not 104.
 #
 # Windows 10 22H2 (also Windows 11)
 # Version 1.16.10261.0
+# 2020-01-25
 #
 # - Windows Terminal #1553: "Feature Request:  Mouse/Touch/Pointer Bindings
 #   (like middle-click paste, right-click context menu, etc.)", compare to
@@ -4648,6 +4683,7 @@ winconsole|Windows 10 new console,
 #
 # Windows 10 21H1
 # Version 1.9.1942.0
+# 2021-07-13
 #
 # This has longstanding issues with CR/LF mapping, e.g.,
 # - first reported by Juergen Pfeifer August 13, 2020, with workaround
@@ -4697,6 +4733,7 @@ winconsole|Windows 10 new console,
 #
 # Windows 10 1903
 # Version 0.2.1831.0
+# 2019-07-02
 #
 # The task manager shows this as "OpenConsole.exe", which differs
 # from the "Windows Command Processor" used for the command-prompt.
@@ -4733,13 +4770,18 @@ winconsole|Windows 10 new console,
 # - color palette can be altered, but OSC 104 for resetting does not work
 # - crashed with a script used for testing NRCS.
 # - does not recognize either xterm+direct or xterm+indirect escapes.
-ms-terminal|Windows10 terminal,
+ms-terminal|Windows terminal,
+	use=xterm+256color, use=ms+terminal,
+ms-terminal-direct|Windows terminal with direct-colors,
+	use=xterm+direct, use=ms+terminal,
+ms+terminal|building block for Windows terminal,
 	npc,
-	cud1=\E[B, kcbt=\E[Z, rmkx=\E[?1l, rmm@, smkx=\E[?1h, smm@,
-	Cr@, Ms@, use=linux+kbs, use=xterm+256color,
-	use=xterm+pcfkeys, use=ansi+rep, use=xterm+sm+1006,
-	use=ecma+index, use=ecma+italics, use=ecma+strikeout,
-	use=xterm-basic, use=xterm+tmux,
+	cud1=\E[B, kcbt=\E[Z, oc@, rmkx=\E[?1l, rmm@, smkx=\E[?1h,
+	smm@, rv=\E\\[>0;10;1c, use=linux+kbs,
+	use=bracketed+paste, use=xterm+pcfkeys, use=ansi+rep,
+	use=xterm+sm+1006, use=ecma+index, use=ecma+italics,
+	use=ecma+strikeout, use=vt420+lrmm, use=xterm-basic,
+	use=xterm+focus, use=xterm+tmux,
 
 #### Visual Studio
 # Visual Studio Code 1.45.0 uses xterm.js 12.8.1 (see https://xtermjs.org/).
@@ -7903,7 +7945,15 @@ kitty+setal|set underline colors (nonstandard),
 
 #### Foot
 # https://codeberg.org/dnkl/foot/
-# Version 1.8.2
+# Version 1.18.1 2024/08/17
+#
+# vttest:
+#	device attributes list 28=rectangular editing
+#	supports rectangle operations, but problems with left/right margins
+#	reports window-size, but not icon or window label
+#	numeric keypad has no application-mode
+#
+# Version 1.8.2 2021/07/31
 #
 # This identifies as a VT220 with 4=sixel and 22=color, however:
 # tack:
@@ -7940,20 +7990,25 @@ foot+base|foot base fragment,
 	bel=^G, clear=\E[H\E[2J, cr=\r, cub1=^H, cud1=\n, dim=\E[2m,
 	ech=\E[%p1%dX, ed=\E[J, el=\E[K, el1=\E[1K,
 	flash=\E]555\E\\, ind=\n, is2=\E[!p\E[4l\E>, kbs=^?,
-	kcbt=\E[Z, oc=\E]104\E\\, op=\E[39;49m, ri=\EM,
-	rmam=\E[?7l, rmkx=\E[?1l\E>, rmso=\E[27m, rmul=\E[24m,
-	rs1=\Ec, rs2=\E[!p\E[4l\E>,
+	kcbt=\E[Z, nel=\EE, oc=\E]104\E\\, op=\E[39;49m, ri=\EM,
+	rmam=\E[?7l, rmkx=\E[?1l\E>, rmm=\E[?1036h\E[?1034l,
+	rmso=\E[27m, rmul=\E[24m, rs1=\Ec, rs2=\E[!p\E[4l\E>,
 	sgr=%?%p9%t\E(0%e\E(B%;\E[0%?%p6%t;1%;%?%p5%t;2%;%?%p2%t;4%;
 	    %?%p1%p3%|%t;7%;%?%p4%t;5%;%?%p7%t;8%;m,
-	sgr0=\E(B\E[m, smam=\E[?7h, smkx=\E[?1h\E=, E3=\E[3J,
+	sgr0=\E(B\E[m, smam=\E[?7h, smkx=\E[?1h\E=,
+	smm=\E[?1036l\E[?1034h, E3=\E[3J, Smulx=\E[4:%p1%dm,
+	rv=\E\\[>1;[0-9][0-9][0-9][0-9][0-9][0-9];0c,
+	xr=\EP>\\|foot\\([0-9]+\\.[0-9]+\\.[0-9]+(-[0-9]+-g[a-f[0-9]
+	   +)?\\)?\E\\\\,
 	use=att610+cvis, use=ansi+csr, use=ansi+cup,
 	use=ansi+enq, use=ansi+local, use=ansi+idc, use=ansi+idl,
 	use=ansi+rca2, use=ansi+rep, use=ansi+tabs,
 	use=ansi+sgrbold, use=ecma+index, use=ecma+italics,
-	use=ecma+strikeout, use=xterm+acs, use=xterm+alt+title,
-	use=xterm+pcfkeys, use=xterm+sm+1006, use=xterm+tmux2,
-	use=xterm+sl-alt, use=bracketed+paste,
-	use=report+version, use=xterm+focus,
+	use=ecma+strikeout, use=kitty+setal, use=xterm+acs,
+	use=xterm+alt+title, use=xterm+pcfkeys,
+	use=xterm+sm+1006, use=xterm+tmux2, use=xterm+sl-alt,
+	use=bracketed+paste, use=report+version,
+	use=xterm+focus,
 
 ######## WEB CLIENTS
 
@@ -7968,6 +8023,30 @@ foot+base|foot base fragment,
 #
 # it can connect to, and display in, a web browser, or as a standalone Qt
 # application.  Either way, it displays in the current desktop session.
+#
+# Testing AppImage for 3.2.0, on Fedora 40:
+# + appears to implement erase-display by painting a double-line on the screen,
+#   doesn't use full screen for ded though it sort-of works for vi.
+# + sets TERMINFO in its shell (imitating iTerm2), and TERM=domterm-xterm which
+#   doesn't work when doing sudo.  According to the git log, that was April 1,
+#   2023.  The VTE developers copied the feature (i.e., a partially workable
+#   private terminal database) in February 2024.
+# + the canonical name for the terminal description is still "domterm", and
+#   presumably the "domterm-xterm" alias is a workaround for hardcoded scripts
+#   that look for "xterm".
+# + almost all of the differences between ncurses's "domterm" and DomTerm's
+#   are additions, but (read further) most are untestable due to breakage in
+#   the program.
+# + DomTerm's updated terminal description says it implements italics, but
+# + hangs in tack when doing blink (just before testing italics)
+# + vttest, ncurses test-program also fare badly, e.g., due to improper line
+#   wrapping and/or inability to consistently clear the screen.
+#
+# The review of DomTerm 3.2.0 was prompted by noticing this page
+#     https://domterm.org/Wire-byte-protocol.html
+# which goes on at length for extensions which collide with a commonly-used
+# control for restoring a saved cursor position:
+#     CSI u     Restore cursor (SCORC, also ANSI.SYS).
 #
 # Testing current code (2019/07/06) with Fedora 30:
 # tack
@@ -8022,6 +8101,27 @@ domterm|DomTerm web client,
 # "wezterm is a terminal emulator with support for modern features
 #  such as fonts with ligatures, hyperlinks, tabs and multiple windows."
 #
+# The documentation bears mention.  It refers to the "ANSI" standard and
+# 	https://wezfurlong.org/wezterm/what-is-a-terminal.html#ansi-and-ecma-48
+# X3.64 (withdrawn long ago).  A related website
+#	https://github.com/wez/ecma48
+# states that ECMA-48 was issued in 1979 and not revised since.  Actually that
+# was the second revision; the fifth revision in 1991 is current.  The source
+# code refers to the second revision in a half-dozen places.  Further, there
+# are three times as many references to Wikipedia as to xterm's documentation.
+# The git commit comments in several instances hint at an incomplete reading
+# of the relevant standards.
+#
+# wezterm-20240203-110809-5046fc22 tested with MacOS
+# General:
+# + initial screensize is now 80x24
+# tack:
+# + no change
+# wraptest:
+# + erasures (EL, ED, DCH, ICH, ESC) do not cancel wrap
+# vttest:
+# + some of the problems with debris have been fixed
+#
 # wezterm-20230712_072601_f4abf8fd-1.fedora38.x86_64
 # tested with MacOS and Fedora 38/39.
 #
@@ -8046,7 +8146,7 @@ domterm|DomTerm web client,
 # + poor (doesn't copy anyone, most of the results are wrong)
 # vttest:
 # + DA is VT5xx with sixel, selective erase, user windows, color
-# + DA2 is VT220 version 277
+# + DA2 is VT220 version 277, perhaps a reference to xterm #277
 # + only the VT100 character set works, contrary to DA/DA2.
 # + no NRCS, either
 # + double-sized character work, with some debris
@@ -8068,9 +8168,30 @@ domterm|DomTerm web client,
 # + implements xterm normal, any-event and button-event mouse, none of the rest
 # + reports window size, none of the other window reports
 wezterm|Wez's Terminal Emulator,
-	km@, xenl@,
-	cvvis@, rmkx=\E[?1l, rmm@, smkx=\E[?1h, smm@,
-	use=xterm-256color,
+	am, bce, km, mir, msgr, npc, xenl,
+	acsc=``aaffggiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz{{||}}~~,
+	bel=^G, bold=\E[1m, cr=\r, cub1=^H, cud1=\n, ech=\E[%p1%dX,
+	el1=\E[1K, flash=\E[?5h$<100/>\E[?5l, ind=\n,
+	is2=\E[!p\E[?3;4l\E[4l\E>, kbs=^?, kcbt=\E[Z, kend=\EOF,
+	op=\E[39;49m, ri=\EM, rmacs=\E(B, rmam=\E[?7l,
+	rmkx=\E[?1l\E>, rmso=\E[27m, rmul=\E[24m,
+	rs1=\Ec\E]104\007, rs2=\E[!p\E[?3;4l\E[4l\E>,
+	sgr=%?%p9%t\E(0%e\E(B%;\E[0%?%p6%t;1%;%?%p5%t;2%;%?%p2%t;4%;
+	    %?%p1%p3%|%t;7%;%?%p4%t;5%;%?%p7%t;8%;m,
+	sgr0=\E(B\E[m, smacs=\E(0, smam=\E[?7h, smkx=\E[?1h\E=,
+	u6=\E[%i%d;%dR, u7=\E[6n, u8=\E[?%[;0123456789]c,
+	u9=\E[c, Smol=\E[53m, Smulx=\E[4:%p1%dm,
+	xr=\EP>\\|WezTerm\\([1-9][0-9-]+\\)\E\\\\,
+	use=ansi+apparrows, use=ansi+csr, use=ansi+cup,
+	use=ansi+erase, use=ansi+idc, use=ansi+idl,
+	use=ansi+inittabs, use=ansi+local, use=ansi+rca2,
+	use=ansi+rep, use=ansi+sgrdim, use=bracketed+paste,
+	use=ecma+index, use=ecma+italics, use=ecma+strikeout,
+	use=report+version, use=vt220+cvis,
+	use=xterm+256color2, use=xterm+alt+title,
+	use=xterm+focus, use=xterm+pcc2, use=xterm+pce2,
+	use=xterm+pcf2, use=xterm+sl-alt, use=xterm+sm+1006,
+	use=xterm+tmux,
 
 #### Contour
 # https://github.com/contour-terminal/contour
@@ -9393,6 +9514,7 @@ cygwinDBG|Debug Version for Cygwin,
 # Oddly enough, while several combinations of modifiers are tabulated, there is
 # none for shifted cursor keys.
 #
+# kf1-kf12:
 #	F1			\E[[A
 #	F2			\E[[B
 #	F3			\E[[C
@@ -9417,6 +9539,7 @@ cygwinDBG|Debug Version for Cygwin,
 #	Right Arrow		\E[C
 #	Up Arrow		\E[A
 #
+# kf13-kf24:
 #	Shift-F1		\E[25~
 #	Shift-F2		\E[26~
 #	Shift-F3		\E[27~
@@ -9430,6 +9553,7 @@ cygwinDBG|Debug Version for Cygwin,
 #	Shift-F11		\E[35~
 #	Shift-F12		\E[36~
 #
+# kf25-kf36:
 #	Ctrl-F1			\E[47~
 #	Ctrl-F2			\E[48~
 #	Ctrl-F3			\E[49~
@@ -9454,6 +9578,7 @@ cygwinDBG|Debug Version for Cygwin,
 #	Ctrl-Right Arrow	\E[40~
 #	Ctrl-Up Arrow		\E[37~
 #
+# kf37-kf48:
 #	Alt-F1			\E[59~
 #	Alt-F2			\E[60~
 #	Alt-F3			\E[61~
@@ -9467,6 +9592,7 @@ cygwinDBG|Debug Version for Cygwin,
 #	Alt-F11			\E[79~
 #	Alt-F12			\E[80~
 #
+# ignore (conflicting):
 #	Alt-Delete		\E[65~
 #	Alt-Down Arrow		\E[60~
 #	Alt-End			\E[66~
@@ -9505,7 +9631,7 @@ cygwinDBG|Debug Version for Cygwin,
 #	Alt-X			\E[104~
 #	Alt-Y			\E[105~
 #	Alt-Z			\E[106~
-djgpp|ANSI emulation for DJGPP alpha,
+djgpp|ANSI emulation for DJGPP 2.05,
 	am, bce, msgr, xhp, xon, xt,
 	colors#8, it#8, pairs#64,
 	acsc=+\020\,\021-\030.^Y0\333`\004a\261f\370g\361h\260j
@@ -9516,16 +9642,34 @@ djgpp|ANSI emulation for DJGPP alpha,
 	dch=\E[%p1%dP, dch1=\E[P, ech=\E[%p1%dX, el1=\E[1K,
 	home=\E[H, hpa=\E[%i%p1%dG, ht=^I, ich=\E[%p1%d@,
 	ich1=\E[@, ind=\E[S, kf1=\E[[A, kf10=\E[21~, kf11=\E[23~,
-	kf12=\E[24~, kf2=\E[[B, kf3=\E[[C, kf4=\E[[D, kf5=\E[[E,
+	kf12=\E[24~, kf13=\E[25~, kf14=\E[26~, kf15=\E[27~,
+	kf16=\E[28~, kf17=\E[29~, kf18=\E[30~, kf19=\E[31~,
+	kf2=\E[[B, kf20=\E[32~, kf21=\E[33~, kf22=\E[34~,
+	kf23=\E[35~, kf24=\E[36~, kf25=\E[47~, kf26=\E[48~,
+	kf27=\E[49~, kf28=\E[50~, kf29=\E[51~, kf3=\E[[C,
+	kf30=\E[52~, kf31=\E[53~, kf32=\E[54~, kf33=\E[55~,
+	kf34=\E[56~, kf35=\E[57~, kf36=\E[58~, kf37=\E[59~,
+	kf38=\E[60~, kf39=\E[61~, kf4=\E[[D, kf40=\E[62~,
+	kf41=\E[63~, kf42=\E[64~, kf43=\E[65~, kf44=\E[66~,
+	kf45=\E[67~, kf46=\E[68~, kf48=\E[80~, kf5=\E[[E,
 	kf6=\E[17~, kf7=\E[18~, kf8=\E[19~, kf9=\E[20~,
 	khome=\E[1~, nel=\r\n, op=\E[37;40m, ri=\E[T, rmso=\E[m,
 	setab=\E[4%p1%dm, setaf=\E[3%p1%dm,
 	sgr=\E[0%?%p1%t;7%;%?%p2%t;4%;%?%p3%t;7%;%?%p4%t;5%e;25%;%?
 	    %p6%t;1%;%?%p7%t;8%;m,
 	sgr0=\E[m, smso=\E[7m, smul=\E[4m, vpa=\E[%i%p1%dd,
-	use=ansi+arrows, use=ansi+erase, use=ansi+idl,
-	use=ansi+local, use=ansi+sgr, use=vt220+pcedit,
-	use=ecma+index,
+	alt_A=\E[82~, alt_B=\E[82~, alt_C=\E[83~, alt_D=\E[84~,
+	alt_E=\E[85~, alt_F=\E[86~, alt_G=\E[87~, alt_H=\E[88~,
+	alt_I=\E[89~, alt_J=\E[90~, alt_K=\E[91~, alt_L=\E[92~,
+	alt_M=\E[93~, alt_N=\E[94~, alt_O=\E[95~, alt_P=\E[96~,
+	alt_Q=\E[97~, alt_R=\E[98~, alt_S=\E[99~, alt_T=\E[100~,
+	alt_U=\E[101~, alt_V=\E[102~, alt_W=\E[103~,
+	alt_X=\E[104~, alt_Y=\E[105~, alt_Z=\E[106~, kDC5=\E[43~,
+	kDN5=\E[38~, kEND5=\E[44~, kHOM5=\E[41~, kIC5=\E[42~,
+	kLFT5=\E[39~, kNXT5=\E[46~, kPRV5=\E[45~, kRIT5=\E[40~,
+	kUP5=\E[37~, use=ansi+arrows, use=ansi+erase,
+	use=ansi+idl, use=ansi+local, use=ansi+sgr,
+	use=vt220+pcedit, use=ecma+index,
 
 djgpp203|entry for DJGPP 2.03,
 	OTbs, am,
@@ -27563,5 +27707,27 @@ v3220|LANPAR Vision II model 3220/3221/3222,
 #
 # 2024-05-25
 #	+ review/update iTerm2 for 3.5.0 -TD
+#
+# 2024-07-27
+#	+ modify wezterm, omitting its broken left/right margin feature (report
+#	  by Thayne McCombs) -TD
+#
+# 2024-08-17
+#	+ review/update foot for 1.18.1 -TD
+#	+ add a note about DomTerm 3.2.0 -TD
+#
+# 2024-09-07
+#	+ update comments -TD
+#
+# 2024-10-05
+#	+ use xterm+alt+title in wezterm -TD
+#	+ update comments -TD
+#
+# 2024-10-26
+#	+ update ms-terminal -TD
+#	+ add ms-terminal-direct -TD
+#
+# 2024-11-02
+#	+ add extended-keys for djgpp 2.05 -TD
 #
 ######## SHANTIH!  SHANTIH!  SHANTIH!
