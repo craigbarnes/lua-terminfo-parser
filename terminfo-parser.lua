@@ -79,8 +79,14 @@ local function lineno(str, i)
     if i == 1 then
         return 1, 1
     end
-    local rest, n = str:sub(1, i):gsub("[^\n]*\n", "")
-    return n + 1, #rest
+
+    -- If the character at position i is a newline, adjust the calculation
+    -- so that the reported position is the end of the line rather than the
+    -- start of the next line
+    local adj = (str:sub(i, i) == "\n") and 1 or 0
+
+    local rest, n = str:sub(1, i - adj):gsub("[^\n]*\n", "")
+    return n + 1, #rest + adj
 end
 
 local function tokenset_to_list(set)

@@ -17,5 +17,5 @@ local function assertError(input, line, column, pattern)
     end
 end
 
-assertError('entry|lacking comma\n  am,\n', 2, 0, "unexpected '\\n', expecting EntryEnd")
+assertError('entry|lacking comma\n  am,\n', 1, 20, "unexpected '\\n', expecting EntryEnd")
 assertError('entry|xyz,\n  am bw\n', 2, 5, "unexpected ' ', expecting '#', ',', '=', '@'")
