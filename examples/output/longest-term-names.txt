@@ -1,10 +1,10 @@
 screen.konsole-256color: 23
 screen.mlterm-256color: 22
-screen-256color-bce-s: 21
 screen.putty-256color: 21
 screen.xterm-256color: 21
+screen-256color-bce-s: 21
+screen-16color-bce-s: 20
 screen-bce.xterm-new: 20
 screen.xterm-xfree86: 20
-screen-16color-bce-s: 20
 screen.minitel1b-80: 19
-screen.minitel12-80: 19
+screen.vte-256color: 19

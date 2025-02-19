@@ -36,6 +36,7 @@ ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
      xterm-direct2:  %p1%c\E[%p2%{1}%-%db
       xterm-direct:  %p1%c\E[%p2%{1}%-%db
      mlterm-direct:  %p1%c\E[%p2%{1}%-%db
+         st-direct:  %p1%c\E[%p2%{1}%-%db
         vte-direct:  %p1%c\E[%p2%{1}%-%db
     xterm-direct16:  %p1%c\E[%p2%{1}%-%db
    xterm-direct256:  %p1%c\E[%p2%{1}%-%db
@@ -64,6 +65,10 @@ ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
             mlterm:  %p1%c\E[%p2%{1}%-%db
            mlterm3:  %p1%c\E[%p2%{1}%-%db
    mlterm-256color:  %p1%c\E[%p2%{1}%-%db
+                st:  %p1%c\E[%p2%{1}%-%db
+          st-0.8.5:  %p1%c\E[%p2%{1}%-%db
+        st-16color:  %p1%c\E[%p2%{1}%-%db
+       st-256color:  %p1%c\E[%p2%{1}%-%db
  terminology-1.8.1:  %p1%c\E[%p2%{1}%-%db
        terminology:  %p1%c\E[%p2%{1}%-%db
          alacritty:  %p1%c\E[%p2%{1}%-%db
@@ -80,6 +85,7 @@ ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
            wezterm:  %p1%c\E[%p2%{1}%-%db
            contour:  %p1%c\E[%p2%{1}%-%db
     contour-direct:  %p1%c\E[%p2%{1}%-%db
+           ghostty:  %p1%c\E[%p2%{1}%-%db
 screen.vte-256color:  %p1%c\E[%p2%{1}%-%db
 screen.putty-256color:  %p1%c\E[%p2%{1}%-%db
 screen.mlterm-256color:  %p1%c\E[%p2%{1}%-%db

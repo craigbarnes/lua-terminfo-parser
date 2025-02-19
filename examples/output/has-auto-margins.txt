@@ -75,6 +75,7 @@
                 st52-old:  am
                   beterm:  am
              linux-basic:  am
+           linux+lockeys:
              linux+decid:
             linux+sfkeys:
                  linux-m:  am
@@ -224,6 +225,8 @@
                  vt220-w:  am
               vt220-8bit:  am
                   vt220d:  am
+            vt220+ufkeys:
+            vt220+sfkeys:
                vt220-nam:
                 vt200-js:  am
                 vt320nam:
@@ -373,6 +376,8 @@
                  x10term:  am
               x10term+sl:
                 xterm-r5:  am
+          xterm+r5+fkeys:
+        xterm+r5+lockeys:
                 xterm-r6:  am
                xterm-old:  am
               xterm-mono:  am
@@ -566,6 +571,7 @@
                  mgr-sun:  am
                mgr-linux:  am
                       st:  am
+                st-0.8.5:  am
                   st-0.8:  am
                   st-0.7:  am
                   st-0.6:  am
@@ -593,6 +599,7 @@
                  wezterm:  am
                  contour:  am
           contour-direct:  am
+                 ghostty:  am
                   cbunix:  am
                  vremote:
                      pty:  am
@@ -1836,6 +1843,6 @@
 
  Totals:
 
-    am: 1483/1835
-    bw:  397/1835
+    am: 1485/1842
+    bw:  397/1842
 

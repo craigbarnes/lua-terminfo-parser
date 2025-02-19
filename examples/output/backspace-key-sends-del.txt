@@ -122,6 +122,7 @@ mlterm2
 mlterm-256color
 aterm
 st
+st-0.8.5
 st-0.8
 st-0.7
 st-0.6
@@ -138,6 +139,7 @@ foot+base
 wezterm
 contour
 contour-direct
+ghostty
 eterm-color
 screen-base
 screen
