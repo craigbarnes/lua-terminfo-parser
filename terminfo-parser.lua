@@ -194,7 +194,7 @@ local terminfo = P {
     CapSpace = P"\n"^0 * S" \t"^1;
     Cap = V"CapSpace" * (V"StrCap" + V"NumCap" + V"Cancelled" + V"BoolCap") * symb",";
 
-    EntryChar = R"\032\126" - S",";
+    EntryChar = R(" +", "-~"); -- ASCII printable range, excluding comma
     EntryEnd = P",\n";
     EntryName = Cg(Cc"_DESC" * C(V"EntryChar"^1)) * T"EntryEnd";
     Caps = Cf(Ct"" * T"EntryName" * T"Cap"^1, setfield);
