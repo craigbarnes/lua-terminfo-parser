@@ -82,9 +82,10 @@ ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
               foot:  %p1%c\E[%p2%{1}%-%db
        foot-direct:  %p1%c\E[%p2%{1}%-%db
          foot+base:  %p1%c\E[%p2%{1}%-%db
+         pangoterm:  %p1%c\E[%p2%{1}%-%db
+pangoterm-256color:  %p1%c\E[%p2%{1}%-%db
+  pangoterm-direct:  %p1%c\E[%p2%{1}%-%db
            wezterm:  %p1%c\E[%p2%{1}%-%db
-           contour:  %p1%c\E[%p2%{1}%-%db
-    contour-direct:  %p1%c\E[%p2%{1}%-%db
            ghostty:  %p1%c\E[%p2%{1}%-%db
 screen.vte-256color:  %p1%c\E[%p2%{1}%-%db
 screen.putty-256color:  %p1%c\E[%p2%{1}%-%db

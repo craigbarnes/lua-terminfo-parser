@@ -71,6 +71,10 @@ sun-e
 sun-c
 sun-type4
 sun-color
+illumos
+sun-16color
+sun-256color
+sun-direct
 uwin
 interix
 opennt-35

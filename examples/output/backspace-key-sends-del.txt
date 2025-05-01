@@ -136,6 +136,9 @@ kitty+common
 foot
 foot-direct
 foot+base
+pangoterm
+pangoterm-256color
+pangoterm-direct
 wezterm
 contour
 contour-direct

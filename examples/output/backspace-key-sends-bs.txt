@@ -27,6 +27,7 @@ stv52pc
 uniterm
 st52-old
 beterm
+sclp
 qansi-g
 qansi
 qansi-t
@@ -119,7 +120,9 @@ vt510
 vt510pc
 vt510pcdos
 vt520
+vt520-w
 vt525
+vt525-w
 vt520ansi
 dec-vt100
 dec-vt220
@@ -331,6 +334,10 @@ sun-e
 sun-c
 sun-type4
 sun-color
+illumos
+sun-16color
+sun-256color
+sun-direct
 next
 nextshell
 news-unk

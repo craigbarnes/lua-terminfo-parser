@@ -96,6 +96,7 @@
                   fbterm:  am
            linux-16color:  am
                    bterm:  am
+                    sclp:
                     mach:  am
                mach-bold:  am
               mach-color:  am
@@ -196,6 +197,7 @@
               vt52-basic:
              vt52+arrows:
             vt100+keypad:
+           vt100+pf1-pf4:
             vt100+pfkeys:
             vt100+fnkeys:
             vt220+keypad:
@@ -245,7 +247,9 @@
                  vt510pc:  am
               vt510pcdos:  am
                    vt520:  am
+                 vt520-w:  am
                    vt525:  am
+                 vt525-w:  am
                vt520ansi:  am
                dec-vt100:  am
                dec-vt220:
@@ -432,6 +436,7 @@
          xterm+256color2:
             xterm+osc104:
           xterm+256setaf:
+         xterm+256setaf2:
            xterm+88color:
           xterm+88color2:
           xterm-256color:  am
@@ -596,6 +601,9 @@
              foot-direct:  am  bw
                foot+base:  am  bw
                  domterm:  am
+               pangoterm:  am
+      pangoterm-256color:  am
+        pangoterm-direct:  am
                  wezterm:  am
                  contour:  am
           contour-direct:  am
@@ -686,6 +694,10 @@
                    sun-c:  am
                sun-type4:  am
                sun-color:  am
+                 illumos:  am
+             sun-16color:  am
+            sun-256color:  am
+              sun-direct:  am
                   wsiris:  am
                   psterm:  am
             psterm-96x48:  am
@@ -959,6 +971,7 @@
                wy99gt-vb:  am  bw
              wy99gt-w-vb:  am  bw
                wy99-ansi:  am
+               wyse+cvis:
               wy99a-ansi:  am
                    wy99f:  am  bw
                   wy99fa:  am  bw
@@ -1843,6 +1856,6 @@
 
  Totals:
 
-    am: 1485/1842
-    bw:  397/1842
+    am: 1494/1855
+    bw:  397/1855
 
