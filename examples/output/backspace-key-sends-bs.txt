@@ -162,7 +162,9 @@ teraterm2.3
 teraterm4.59
 teraterm4.97
 teraterm-256color
+teraterm5.0
 teraterm
+rlogin-color
 ms-vt100
 ms-vt100-color
 ms-vt100+
@@ -240,6 +242,7 @@ gnome-256color
 vte-2014
 vte-2017
 vte-2018
+vte-2022
 vte
 vte-256color
 xfce

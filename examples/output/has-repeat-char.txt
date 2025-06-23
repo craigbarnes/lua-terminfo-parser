@@ -60,6 +60,7 @@ ms-terminal-direct:  %p1%c\E[%p2%{1}%-%db
          xterm-sun:  %p1%c\E[%p2%{1}%-%db
         xterms-sun:  %p1%c\E[%p2%{1}%-%db
           vte-2018:  %p1%c\E[%p2%{1}%-%db
+          vte-2022:  %p1%c\E[%p2%{1}%-%db
                vte:  %p1%c\E[%p2%{1}%-%db
       vte-256color:  %p1%c\E[%p2%{1}%-%db
              hterm:  %p1%c\E[%p2%{1}%-%db
