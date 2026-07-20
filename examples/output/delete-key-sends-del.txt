@@ -127,6 +127,7 @@ wy520-36pc
 wy520-48pc
 wy520-36wpc
 wy520-48wpc
+vp3a+
 visa50
 hds200
 ibmpc

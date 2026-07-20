@@ -243,6 +243,14 @@ kPRV4
 kPRV5
 kPRV6
 kPRV7
+kPause
+kPrint
+kPrint2
+kPrint3
+kPrint4
+kPrint5
+kPrint6
+kPrint7
 kRDO
 kRES
 kRIT
@@ -254,6 +262,7 @@ kRIT7
 kRPL
 kSAV
 kSPD
+kScroll
 kUND
 kUP
 kUP3
@@ -504,6 +513,7 @@ rshm
 rsubm
 rsupm
 rv
+rwidm
 s0ds
 s1ds
 s2ds
